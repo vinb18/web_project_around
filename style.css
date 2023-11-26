@@ -117,6 +117,7 @@ align-self: center;
     flex-direction:column;
     background-color: #000000;
     gap: 20px;
+    padding-bottom: 48px;
   }
 
   .element {
@@ -137,18 +138,22 @@ align-self: center;
     margin: auto;
   }
 
-  /*.element__image {
+
+  .element__image {
     width:282px;
-    object-fit: contain;
+    height:282px;
+    object-fit: cover;
   }
-*/
+
   .element__title {
+    width:246px;
     color: #000;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin:0;
   }
 
   .element__button {
@@ -162,5 +167,20 @@ line-height: normal;
   .image__button {
     width: 20px;
     height:18px;
+  }
 
+  .footer {
+    width: 282px;
+    height: 14px;
+    padding-bottom: 36px;
+  }
+
+  .footer__copyright{
+  color: #545454;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin:0;
   }
