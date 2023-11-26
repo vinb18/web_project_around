@@ -121,14 +121,12 @@ align-self: center;
 
   .element {
     width: 282px;
-height: 361px;
-border-radius: 10px;
-border-color: #000;
-background: #FFF;
-display:flex;
-flex-direction:column;
-flex-wrap: nowrap;
-
+    height: 361px;
+    border-radius: 10px;
+    background: #FFF;
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
   }
 
   .element__info {
@@ -139,12 +137,11 @@ flex-wrap: nowrap;
     margin: auto;
   }
 
-  .element__image {
+  /*.element__image {
     width:282px;
     object-fit: contain;
-
   }
-
+*/
   .element__title {
     color: #000;
 font-family: Inter;
