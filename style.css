@@ -5,6 +5,7 @@
     align-items: center;
     font-family: "Inter", sans-serif;
     min-width: 320px;
+    max-width: 1280px;
   }
 
   .header__logo {
@@ -25,29 +26,19 @@ background: #545454;
 
   }
 
-  /*@media screen and (min-width: 1280px) {
-
-    .header__logo {
-        width:173px;
-        height:33px;
-    }
-
-    hr {
-      width: 1280px;
-    }
-  }
-*/
   .profile {
     padding-top:32px;
     padding-bottom:36px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 
   .profile__image {
     width: 120px;
     border-radius: 50%;
+    border-color:#000000;
     margin:auto;
     display:block;
   }
@@ -184,3 +175,87 @@ align-self: center;
   line-height: normal;
   margin:0;
   }
+
+@media screen and (min-width: 1280px) {
+
+    .header__logo {
+        width:173px;
+        height:33px;
+    }
+
+    hr {
+      width: 880px;
+    }
+
+    .profile {
+        width:880px;
+        height:120px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    
+      .profile__image {
+        margin:0 24px 0 0;
+      }
+    
+      .profile__info {
+        width:415px;
+        height:77px;
+        padding: 22px 0 21px;
+        justify-content: flex-start;
+        margin-right:165px;
+        
+      }
+    
+      .profile__name {
+    font-size: 42px;
+    line-height: 114%;
+
+      }
+    
+      .profile__activity {
+        width:415px;
+        color: #FFF;
+    font-size: 18px;
+    text-align: left;
+      }
+    
+      .profile__edit-button {
+        width:24px;
+        height:24px;
+      }
+    
+      .image__edit-button {
+        width:24px;
+        height:24px;
+      }
+    
+     .profile__add-button {
+        width:150px;
+      }
+    
+
+      .image__add-button {
+        width: 150px;
+      }
+
+      .elements {
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        background-color: #000000;
+        gap: 17px;
+        padding: 71px 200px 66px;
+      }
+
+      .footer {
+        width: 880px;
+        height: 18px;
+        padding-bottom: 60px;
+      }
+
+      .footer__copyright{
+        font-size: 18px;
+  }
+}
