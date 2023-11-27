@@ -239,6 +239,12 @@ align-self: center;
     margin-top:15px;
   }
 
+  .image__button-close {
+    width: 40.698px;
+height: 40.698px;
+transform: rotate(45deg);
+  }
+
 
 
 
