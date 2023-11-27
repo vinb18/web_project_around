@@ -214,7 +214,15 @@ align-self: center;
     font-weight: 400;
     line-height: normal;
     border:none;
+    outline:none;
     margin-bottom: 30px;
+  }
+
+  .form__line {
+    width:238px;
+    height: 1px;
+    display:block;
+    background-color:#000;
   }
 
   .form__button {
@@ -224,6 +232,7 @@ align-self: center;
     background-color: #FFF;
     color:#FFF;
   }
+
 
   .image__submit-button {
     width:238px;
