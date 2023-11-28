@@ -2,6 +2,10 @@ function hacerClick() {
     console.log("hice click")
 }
 
-const buttonedit = document.querySelector(".button__edit")
-buttonedit.addEventListener("click",hacerClick)
+const buttons = document.querySelectorAll(".button")
 
+buttons[0].addEventListener("click", hacerClick)
+
+for (let i=0; i < buttons.length; i++){
+    console.log(buttons[i]);
+}

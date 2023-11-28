@@ -79,6 +79,7 @@ margin:0;
 
   .button {
     border:1px solid #FFF;
+    cursor:pointer;
   }
 
   .button__edit {
@@ -86,6 +87,14 @@ margin:0;
     height:18px;
     background: url(./images/editbutton.svg) no-repeat center;
     box-sizing: border-box;
+  }
+
+  .button__edit:hover {
+    opacity:0.6;
+  }
+
+  .button__add:hover {
+    opacity:0.6;
   }
 
   .button__add {
@@ -246,6 +255,10 @@ margin:0;
     margin-top:45px;
   }
 
+  .button__save:hover {
+    opacity:0.8;
+  }
+
   .button__close {
     background:url(./images/CloseIcon.svg) no-repeat center;
     width: 26px;
@@ -255,7 +268,10 @@ margin:0;
     top:-39px;
     right:0;
   }
-
+   
+   .button__close:hover {
+    opacity:0.6;
+   }
 
 
 
