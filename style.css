@@ -5,7 +5,6 @@
     align-items: center;
     font-family: "Inter", sans-serif;
     min-width: 320px;
-    max-width: 1280px;
   }
 
   .header__logo {
@@ -80,6 +79,7 @@ margin:0;
 
   .button {
     border:1px solid #FFF;
+    cursor:pointer;
   }
 
   .button__edit {
@@ -87,6 +87,14 @@ margin:0;
     height:18px;
     background: url(./images/editbutton.svg) no-repeat center;
     box-sizing: border-box;
+  }
+
+  .button__edit:hover {
+    opacity:0.6;
+  }
+
+  .button__add:hover {
+    opacity:0.6;
   }
 
   .button__add {
@@ -141,6 +149,7 @@ margin:0;
     text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width:238px;
   }
 
   .button__like {
@@ -149,6 +158,10 @@ margin:0;
     background: url(./images/corazon.svg);
     border:none;
 
+  }
+
+  .button__like:hover {
+    opacity:0.5;
   }
 
   .footer {
@@ -171,6 +184,11 @@ margin:0;
     position:fixed;
     top:123px;
     margin:auto;
+    display:none;
+}
+
+.popup__opened {
+    display:block;
 }
 
 .popup__overlay {
@@ -180,7 +198,7 @@ margin:0;
     background: #000;
 }
 
-  .form__container-popup {
+  .popup__container {
     width:282px;
     height:322px;
     border-radius: 10px;
@@ -191,7 +209,7 @@ margin:0;
     position:relative;
   }
 
-  .form__heading{
+  .popup__heading {
     width:238px;
     color: #000;
     font-size: 18px;
@@ -203,13 +221,13 @@ margin:0;
     padding-top:25px;
   }
 
-  .form__input-container {
+  /*.popup__input-container {
     width:238px;
     height:14px;
-    border:none;
   }
+    */
 
-  .form__item {
+  .popup__item {
     width:238px;
     height:14px;
     color: #000;
@@ -222,11 +240,11 @@ margin:0;
     padding-bottom:13px;
   }
 
-  .form__item_activity {
+  .popup__item_activity {
     margin-top:30px
   }
 
-  .form__line {
+  .popup__line {
     width:238px;
     height: 1px;
     display:block;
@@ -241,6 +259,10 @@ margin:0;
     margin-top:45px;
   }
 
+  .button__save:hover {
+    opacity:0.8;
+  }
+
   .button__close {
     background:url(./images/CloseIcon.svg) no-repeat center;
     width: 26px;
@@ -250,7 +272,10 @@ margin:0;
     top:-39px;
     right:0;
   }
-
+   
+   .button__close:hover {
+    opacity:0.6;
+   }
 
 
 
@@ -320,12 +345,14 @@ margin:0;
       */
 
       .elements {
+        width:880px;
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
         background-color: #000000;
         gap: 17px;
         padding: 71px 200px 66px;
+        justify-content: center;
       }
 
       .footer {
@@ -338,12 +365,12 @@ margin:0;
         font-size: 18px;
   }
 
-  .form__container-popup {
+  .popup__container {
     width:430px;
     height:330px;
   }
 
-  .form__heading{
+  .popup__heading {
     width:360px;
     font-size:24px;
     padding-top:34px;
@@ -351,20 +378,20 @@ margin:0;
   }
 
 
-  .form__input-container {
+  /*.popup__input-container {
     width:358px;
-  }
+  }*/
 
-  .form__item {
+  .popup__item {
     width:358px;
     height:14px;
   }
 
-  .form__item_activity {
+  .popup__item_activity {
     margin-top: 29.74px;
   }
 
-  .form__line {
+  .popup__line {
     width:358px;
   }
 
