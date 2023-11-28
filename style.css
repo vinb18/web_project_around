@@ -160,6 +160,10 @@ margin:0;
 
   }
 
+  .button__like:hover {
+    opacity:0.5;
+  }
+
   .footer {
     width: 282px;
     height: 14px;
