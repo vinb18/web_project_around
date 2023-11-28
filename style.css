@@ -78,28 +78,22 @@ line-height: normal;
 margin:0;
   }
 
-  .profile__edit-button {
+  .button {
+    border:1px solid #FFF;
+  }
+
+  .button__edit {
     width:18px;
     height:18px;
-    background-color: #000000;
-    border:none;
+    background: url(./images/editbutton.svg) no-repeat center;
+    box-sizing: border-box;
   }
 
-  .image__edit-button {
-    width:18px;
-    height:18px;
-  }
-
-  .profile__add-button {
-    background-color: #000000;
-    border:none;
-  }
-
-  .image__add-button {
+  .button__add {
     width: 282px;
-height: 50px;
-display: block;
-align-self: center;
+    height: 50px;
+    background: url(./images/addbutton.svg) no-repeat center;
+    border-radius: 2px;
   }
 
   .elements {
@@ -121,11 +115,12 @@ align-self: center;
   }
 
   .element__info {
-    width: 246px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin: auto;
+    width: 246px;
+    height:23px;
+    justify-content: space-between;
   }
 
 
@@ -136,7 +131,6 @@ align-self: center;
   }
 
   .element__title {
-    width:246px;
     color: #000;
     font-family: Inter;
     font-size: 24px;
@@ -144,19 +138,17 @@ align-self: center;
     font-weight: 900;
     line-height: normal;
     margin:0;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   }
 
-  .element__button {
-    width: 20px;
-    height:18px;
-    background-color: #FFFF;
+  .button__like {
+    width: 20.76px;
+    height:18.13px;
+    background: url(./images/corazon.svg);
     border:none;
 
-  }
-
-  .image__button {
-    width: 20px;
-    height:18px;
   }
 
   .footer {
@@ -175,7 +167,20 @@ align-self: center;
   margin:0;
   }
 
-  .form__edit-profile {
+.popup{
+    position:fixed;
+    top:123px;
+    margin:auto;
+}
+
+.popup__overlay {
+    width:100%;
+    position:fixed;
+    opacity: 0.5;
+    background: #000;
+}
+
+  .form__container-popup {
     width:282px;
     height:322px;
     border-radius: 10px;
@@ -183,18 +188,18 @@ align-self: center;
     display:flex;
     flex-direction:column;
     align-items: center;
+    position:relative;
   }
 
   .form__heading{
     width:238px;
     color: #000;
-    font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
     margin:0;
-    padding-bottom:45px;
+    padding-bottom:75px;
     padding-top:25px;
   }
 
@@ -214,8 +219,11 @@ align-self: center;
     font-weight: 400;
     line-height: normal;
     border:none;
-    outline:none;
-    margin-top: 30px;
+    padding-bottom:13px;
+  }
+
+  .form__item_activity {
+    margin-top:30px
   }
 
   .form__line {
@@ -225,24 +233,22 @@ align-self: center;
     background-color:#000;
   }
 
-  .form__button {
+  .button__save{
     width:238px;
-    height:10px;
+    height:46px;
+    background: url(./images/submitbutton.svg);
+    border-radius: 2px;
+    margin-top:45px;
+  }
+
+  .button__close {
+    background:url(./images/CloseIcon.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    position:absolute;
     border:none;
-    background-color: #FFF;
-    color:#FFF;
-  }
-
-
-  .image__submit-button {
-    width:238px;
-    margin-top:15px;
-  }
-
-  .image__button-close {
-    width: 40.698px;
-height: 40.698px;
-transform: rotate(45deg);
+    top:-39px;
+    right:0;
   }
 
 
@@ -293,7 +299,7 @@ transform: rotate(45deg);
     text-align: left;
       }
     
-      .profile__edit-button {
+     /* .profile__edit-button {
         width:24px;
         height:24px;
       }
@@ -311,6 +317,7 @@ transform: rotate(45deg);
       .image__add-button {
         width: 150px;
       }
+      */
 
       .elements {
         display:flex;
@@ -331,17 +338,18 @@ transform: rotate(45deg);
         font-size: 18px;
   }
 
-  .form__edit-profile {
+  .form__container-popup {
     width:430px;
     height:330px;
   }
 
   .form__heading{
-    width:330px;
+    width:360px;
     font-size:24px;
     padding-top:34px;
-    padding-bottom:24px;
+    padding-bottom:54px;
   }
+
 
   .form__input-container {
     width:358px;
@@ -350,21 +358,25 @@ transform: rotate(45deg);
   .form__item {
     width:358px;
     height:14px;
-    margin-top: 30px;
+  }
+
+  .form__item_activity {
+    margin-top: 29.74px;
   }
 
   .form__line {
     width:358px;
-    height: 1px;
   }
 
-  .form__button {
-    width:358px;
-  }
-
-
-  .image__submit-button {
-    width:358px;
+  .button__save {
     margin-top:48px;
+  }
+
+  .button__close {
+    width: 40px;
+    height: 40px;
+    top:-39px;
+    right:-40px;
+
   }
 }

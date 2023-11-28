@@ -20,14 +20,11 @@
             <img class="profile__image" src="./images/Jacques.png" alt="Imagen de un señor canoso con gorro rojo" />
             <div class="profile__info">
                 <h1 class="profile__name">Jacques Cousteau</h1>
-                <button type="button" class="profile__edit-button">
-                    <input type="image" class="image__edit-button" src="./images/editbutton.svg"
-                        alt="Botón de editar" />
+                <button type="button" class="button button__edit">
                 </button>
                 <h2 class="profile__activity">Explorer</h2>
             </div>
-            <button type="button" class="profile__add-button">
-                <input type="image" class="image__add-button" src="./images/addbutton.svg" alt="Botón de agregar">
+            <button type="button" class="button button__add">
             </button>
         </div>
         <section class="elements">
@@ -36,19 +33,14 @@
                     alt="Paisaje de montañas grises">
                 <div class="element__info">
                     <h3 class="element__title">Gatlinburg</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
-                    </button>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/Antelope Canyon-Arizona.jpg" alt="Gran cañón Arizona">
                 <div class="element__info">
                     <h3 class="element__title">Arizona</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
+                    <button type="button" class="button button__like">
                     </button>
                 </div>
             </div>
@@ -57,9 +49,7 @@
                     alt="Montañana nevada y lago">
                 <div class="element__info">
                     <h3 class="element__title">Oregon</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
+                    <button type="button" class="button button__like">
                     </button>
                 </div>
             </div>
@@ -67,9 +57,7 @@
                 <img class="element__image" src="./images/Mount Rainier-Washington.jpg" alt="Atardecer en lago">
                 <div class="element__info">
                     <h3 class="element__title">Washington</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
+                    <button type="button" class="button button__like">
                     </button>
                 </div>
             </div>
@@ -77,9 +65,7 @@
                 <img class="element__image" src="./images/Yellowstone National Park.jpg" alt="Paisaje de río y pinos">
                 <div class="element__info">
                     <h3 class="element__title">Yellowstone National Park</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
+                    <button type="button" class="button button__like">
                     </button>
                 </div>
             </div>
@@ -87,9 +73,7 @@
                 <img class="element__image" src="./images/Zion National Park.jpg" alt="Carretera con nieve y montañas">
                 <div class="element__info">
                     <h3 class="element__title">Zion National Park</h3>
-                    <button type="button" class="element__button">
-                        <input type="image" class="image__button-like" src="./images/corazon.svg"
-                            alt="Corazón me gusta">
+                    <button type="button" class="button button__like">
                     </button>
                 </div>
             </div>
@@ -97,24 +81,20 @@
         <footer class="footer">
             <p class="footer__copyright">© 2023 Around The U.S.</p>
         </footer>
-        <div class="form__edit-profile">
-            <button type="button" class="close__button">
-                <input type="image" class="image__button-close" src="./images/closeicon.svg" alt="Botón de cerrar">
-            </button>
-            <h2 class="form__heading">Editar perfil</h2>
-            <fieldset class="form__input-container">
+        <div class="popup">
+            <div class="popup__overlay"></div>
+            <div class="form__container-popup">
+                <button type="button" class="button button__close">
+                </button>
+                <h4 class="form__heading">Editar perfil</h4>
                 <input class="form__item form__item_name" id="name" name="name" placeholder="Nombre" required></input>
                 <span class="form__line"></span>
                 <input class="form__item form__item_activity" id="activity" name="activity" placeholder="Acerca de mí"
                     required></input>
                 <span class="form__line"></span>
-                <button type="save" class="form__button">Guardar
-                    <input type="image" class="image__submit-button" src="./images/submitbutton.svg"
-                        alt="Botón de guardar">
-                </button>
-            </fieldset>
+                <button type="save" class="button button__save"></button>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
