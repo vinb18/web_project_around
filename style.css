@@ -17,68 +17,45 @@
   
   .header__logo {
     width:126px;
-    /*height:24px;*/
-    /*display:block;*/
     padding: 1.6em 1.6em 2em;
-    /*color: #FFF;*/
   }
 
-  /*hr {
-    width:320px;
-    height: 1px;
-    opacity: 0.7;
-background: #545454;
-
-  }
-*/
   .profile {
     padding: 2em 0 2.2em;
     display: flex;
     flex-direction: column;
     align-items: center;
     color:#FFF;
-
   }
 
   .profile__image {
     width: 120px;
     border-radius: 50%;
-    /*border-color:#000000;*/
-    /*margin:auto;*/
-    /*display:block;*/
   }
 
   .profile__info {
     width:85%;
-    /*height:50px;*/
     display:flex;
-    /*flex-direction: row;*/
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /*align-content:space-between;*/
     padding: 1.6em 0 2.2em;
     column-gap:10px;
   }
 
   .profile__name {
-/*text-align: center;*/
-font-size: 1.3em;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin:0;
+   font-size: 1.3em;
+   font-weight: 500;
+   line-height: normal;
+   margin:0;
   }
 
-  .profile__activity {
-    /*width:282px;*/
-text-align: center;
-/*font-family: Inter;*/
-font-size: 0.8em;
-/*font-style: normal;*/
-font-weight: 400;
-line-height: normal;
-margin:0.8em 0 0;
+  .profile__job {
+   text-align: center;
+   font-size: 0.8em;
+   font-weight: 400;
+   line-height: normal;
+   margin:0.8em 0 0;
   }
 
   .button {
@@ -115,13 +92,11 @@ margin:0.8em 0 0;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* background-color: #000000; */
     gap: 1.25em;
     padding-bottom: 4em;
   }
 
   .element {
-    /*width: 282px;*/
     height: 361px;
     border-radius: .62em;
     background: #FFF;
@@ -153,9 +128,9 @@ margin:0.8em 0 0;
     line-height: normal;
     margin:0;
     text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width:238px;
+   white-space: nowrap;
+   overflow: hidden;
+   width:238px;
   }
 
   .button__like {
@@ -189,26 +164,35 @@ margin:0.8em 0 0;
 .popup{
     position:fixed;
     top:123px;
-    margin:auto;
     display:none;
 }
 
 .popup__opened {
-    display:block;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
-.popup__overlay {
-    width:100%;
-    position:fixed;
-    opacity: 0.5;
+/*.popup__overlay {
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    opacity: 0.7;
     background: #000;
+}*/
+
+.popup__container {
+  width:282px;
+  height:322px;
+  background-color:white;
+  border-radius: 10px;
 }
 
-  .popup__container {
-    width:282px;
-    height:322px;
-    border-radius: 10px;
-    background-color: #FFF;
+  .popup__form {
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -227,12 +211,6 @@ margin:0.8em 0 0;
     padding-top:25px;
   }
 
-  /*.popup__input-container {
-    width:238px;
-    height:14px;
-  }
-    */
-
   .popup__item {
     width:238px;
     height:14px;
@@ -244,9 +222,10 @@ margin:0.8em 0 0;
     line-height: normal;
     border:none;
     padding-bottom:13px;
+    border-bottom: 0.7px solid #545454;
   }
 
-  .popup__item_activity {
+  .popup__item_job {
     margin-top:30px
   }
 
@@ -257,12 +236,20 @@ margin:0.8em 0 0;
     background-color:#000;
   }
 
+  .popup__set {
+    border:none;
+    margin:0;
+    padding: 0 .75em;
+   }
+
+
   .button__save{
     width:238px;
     height:46px;
-    background: url(./images/submitbutton.svg);
+    background: #000;
     border-radius: 2px;
     margin-top:45px;
+    color:white;
   }
 
   .button__save:hover {
@@ -283,6 +270,7 @@ margin:0.8em 0 0;
     opacity:0.6;
    }
 
+ 
 
 
 @media screen and (min-width: 1280px) {
@@ -294,10 +282,7 @@ margin:0.8em 0 0;
 
     .profile {
         width:68%;
-        /*height:120px;*/
-        /*display: flex;*/
         flex-direction: row;
-        /*align-items: center;*/
         padding:2.2em 0 3.1em;
       }
     
@@ -306,8 +291,6 @@ margin:0.8em 0 0;
       }
     
       .profile__info {
-        /*width:415px;
-        height:77px;*/
         padding: 1.3em 0 1.3em;
         justify-content: flex-start;
         margin-right:10.3em;
@@ -320,44 +303,11 @@ margin:0.8em 0 0;
 
       }
     
-      .profile__activity {
-        /*width:415px;
-        color: #FFF;*/
+      .profile__job{
     font-size: 18px;
-    /*text-align: left;*/
     margin-top:1em;
       }
     
-     /* .profile__edit-button {
-        width:24px;
-        height:24px;
-      }
-    
-      .image__edit-button {
-        width:24px;
-        height:24px;
-      }
-    
-     .profile__add-button {
-        width:150px;
-      }
-    
-
-      .image__add-button {
-        width: 150px;
-      }
-      */
-
-      /*.elements {
-        width:880px;
-        display:flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        background-color: #000000;
-        gap: 17px;
-        justify-content: center;
-      }*/
-
       .footer {
         width: 880px;
         height: 18px;
@@ -373,6 +323,10 @@ margin:0.8em 0 0;
     height:330px;
   }
 
+  .popup__set {
+    width:83%
+  }
+
   .popup__heading {
     width:360px;
     font-size:24px;
@@ -380,17 +334,12 @@ margin:0.8em 0 0;
     padding-bottom:54px;
   }
 
-
-  /*.popup__input-container {
-    width:358px;
-  }*/
-
   .popup__item {
     width:358px;
     height:14px;
   }
 
-  .popup__item_activity {
+  .popup__item_job {
     margin-top: 29.74px;
   }
 

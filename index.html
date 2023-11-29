@@ -21,7 +21,7 @@
                 <h1 class="profile__name">Jacques Cousteau</h1>
                 <button type="button" class="button button__edit">
                 </button>
-                <h2 class="profile__activity">Explorer</h2>
+                <h2 class="profile__job">Explorer</h2>
             </div>
             <button type="button" class="button button__add">
             </button>
@@ -31,14 +31,14 @@
                 <img class="element__image" src="./images/Great Smokey Mountains-Gatlinburg.jpg"
                     alt="Paisaje de montañas grises">
                 <div class="element__info">
-                    <h3 class="element__title">Gatlinburg</h3>
+                    <h6 class="element__title">Gatlinburg</h6>
                     <button type="button" class="button button__like"></button>
                 </div>
             </div>
             <div class="element">
                 <img class="element__image" src="./images/Antelope Canyon-Arizona.jpg" alt="Gran cañón Arizona">
                 <div class="element__info">
-                    <h3 class="element__title">Arizona</h3>
+                    <h6 class="element__title">Arizona</h6>
                     <button type="button" class="button button__like">
                     </button>
                 </div>
@@ -47,7 +47,7 @@
                 <img class="element__image" src="./images/Mount Hood National Forest-Oregon.jpg"
                     alt="Montañana nevada y lago">
                 <div class="element__info">
-                    <h3 class="element__title">Oregon</h3>
+                    <h6 class="element__title">Oregon</h6>
                     <button type="button" class="button button__like">
                     </button>
                 </div>
@@ -55,7 +55,7 @@
             <div class="element">
                 <img class="element__image" src="./images/Mount Rainier-Washington.jpg" alt="Atardecer en lago">
                 <div class="element__info">
-                    <h3 class="element__title">Washington</h3>
+                    <h6 class="element__title">Washington</h6>
                     <button type="button" class="button button__like">
                     </button>
                 </div>
@@ -63,7 +63,7 @@
             <div class="element">
                 <img class="element__image" src="./images/Yellowstone National Park.jpg" alt="Paisaje de río y pinos">
                 <div class="element__info">
-                    <h3 class="element__title">Yellowstone National Park</h3>
+                    <h6 class="element__title">Yellowstone National Park</h6>
                     <button type="button" class="button button__like">
                     </button>
                 </div>
@@ -71,7 +71,7 @@
             <div class="element">
                 <img class="element__image" src="./images/Zion National Park.jpg" alt="Carretera con nieve y montañas">
                 <div class="element__info">
-                    <h3 class="element__title">Zion National Park</h3>
+                    <h6 class="element__title">Zion National Park</h6>
                     <button type="button" class="button button__like">
                     </button>
                 </div>
@@ -82,16 +82,19 @@
         </footer>
         <div class="popup">
             <div class="popup__overlay"></div>
+            <button type="button" class="button button__close">
+            </button>
             <div class="popup__container">
-                <button type="button" class="button button__close">
-                </button>
-                <h4 class="popup__heading">Editar perfil</h4>
-                <input class="popup__item popup_item_name" id="name" name="name" placeholder="Nombre" required></input>
-                <span class="popup__line"></span>
-                <input class="popup__item popup__item_activity" id="activity" name="activity" placeholder="Acerca de mí"
-                    required></input>
-                <span class="popup__line"></span>
-                <button type="save" class="button button__save"></button>
+                <form class="popup__form">
+                    <span class="popup__heading">Edit profile</span>
+                    <fieldset class="popup__set">
+                        <input class="popup__item popup__item_name" id="name" name="name" placeholder="Name"
+                            required></input>
+                        <input class="popup__item popup__item_job" id="job" name="job" placeholder="About me"
+                            required></input>
+                    </fieldset>
+                    <button type="save" class="button button__save">Save</button>
+                </form>
             </div>
         </div>
         <script src="index.js"></script>

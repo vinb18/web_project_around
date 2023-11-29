@@ -1,4 +1,4 @@
-function hacerClick() {
+/*function hacerClick() {
     console.log("hice click")
 }
 // DOM
@@ -36,4 +36,12 @@ function closePopup() {
   // 1. SELECCIONAR MODAL (YA ESTÁ HECHO)
   // 2. DESACTIVAR MODAL (CLASE EN CSS .popup) CAMBIANDO EL DISPLAY DE NONE A BLOCK
   modal.style.display = "none"
-}
+}*/
+
+const buttonEdit = document.querySelector(".button__edit");
+const popupProfile = document.querySelector(".popup");
+const buttonClose = document.querySelector(".button__close");
+
+const profileName = document.querySelector(".profile__name");
+const profileJob = document.querySelector(".profile__job");
+const profileForm = document.querySelector(".popup__form");
