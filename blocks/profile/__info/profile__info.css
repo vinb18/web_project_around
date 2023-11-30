@@ -1,0 +1,19 @@
+.profile__info {
+    width:85%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6em 0 2.2em;
+    column-gap:10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+
+    .profile__info {
+      padding: 1.3em 0 1.3em;
+      justify-content: flex-start;
+      margin-right:10.3em;
+      
+    }
+  }

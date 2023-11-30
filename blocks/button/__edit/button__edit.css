@@ -1,0 +1,10 @@
+.button__edit {
+    width:18px;
+    height:18px;
+    background: url(./images/editbutton.svg) no-repeat center;
+    box-sizing: border-box;
+  }
+
+  .button__edit:hover {
+    opacity:0.6;
+  }

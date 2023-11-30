@@ -1,0 +1,13 @@
+.popup__line {
+    width:238px;
+    height: 1px;
+    display:block;
+    background-color:#000;
+  }
+
+  @media screen and (min-width: 1280px) {
+
+    .popup__line {
+      width:358px;
+    }
+  }
