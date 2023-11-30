@@ -2,7 +2,6 @@ const buttonEdit = document.querySelector(".button__edit");
 const popupProfile = document.querySelector(".popup");
 const buttonClose = document.querySelector(".button__close");
 const buttonLike = document.querySelector("button__like");
-const buttonLikeColor = document
 
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
