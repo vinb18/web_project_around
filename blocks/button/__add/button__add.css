@@ -1,7 +1,7 @@
 .button__add {
     width: 282px;
     height: 50px;
-    background: url(./images/addbutton.svg) no-repeat center;
+    background: url(../../../images/addbutton.svg) no-repeat center;
     border-radius: 2px;
   }
 
