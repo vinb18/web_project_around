@@ -28,3 +28,4 @@ profileForm.addEventListener("submit",function(event){
     profileJob.textContent = inputJob.value;
     togglePopup(popupProfile)
 })
+
