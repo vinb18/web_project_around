@@ -8,3 +8,10 @@
   .button__add:hover {
     opacity:0.6;
   }
+
+  @media screen and (min-width: 1280px) {
+
+    .button__add {
+      width:150px;
+    }
+  }

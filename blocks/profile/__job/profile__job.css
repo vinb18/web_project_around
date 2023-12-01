@@ -3,13 +3,11 @@
     font-size: 0.8em;
     font-weight: 400;
     line-height: normal;
-    margin:0.8em 0 0;
    }
 
    @media screen and (min-width: 1280px) {
 
     .profile__job{
   font-size: 18px;
-  margin-top:1em;
     }
 }
