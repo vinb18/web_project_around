@@ -15,6 +15,8 @@ function togglePopup(popup){
     }
 
 buttonEdit.addEventListener("click",function(){
+  inputName.value = profileName.textContent;
+  inputJob.value = profileJob.textContent;
     togglePopup(popupProfile);
 });
 
