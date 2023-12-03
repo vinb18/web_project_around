@@ -1,4 +1,84 @@
 .button {
-    border:1px solid #FFF;
-    cursor:pointer;
+  border:1px solid #FFF;
+  cursor:pointer;
+}
+
+.button__add {
+  width: 282px;
+  height: 50px;
+  background: url(../../../images/addbutton.svg) no-repeat center;
+  border-radius: 2px;
+}
+
+.button__add:hover {
+  opacity:0.6;
+}
+
+.button__close {
+  background:url(../../../images/closeicon.svg) no-repeat center;
+  width: 26px;
+  height: 26px;
+  position:absolute;
+  border:none;
+  top:-39px;
+  right:0;
+}
+
+.button__close:hover {
+  opacity:0.6;
+}
+
+.button__edit {
+  width:18px;
+  height:18px;
+  background: url(../../../images/editbutton.svg) no-repeat center;
+  box-sizing: border-box;
+  flex-shrink:0;
+}
+
+.button__edit:hover {
+  opacity:0.6;
+}
+
+.button__like {
+  width: 20.76px;
+  height:18.13px;
+  background: url(../../../images/corazon.svg);
+  border:none;
+}
+
+.button__like:hover {
+  opacity:0.5;
+}
+
+.button__save{
+  width:238px;
+  height:46px;
+  background: #000;
+  border-radius: 2px;
+  margin-top:45px;
+  color:white;
+}
+
+.button__save:hover {
+  opacity:0.8;
+}
+
+@media screen and (min-width: 1280px) {
+
+.button__add {
+  width:150px;
   }
+
+.button__close {
+  width: 40px;
+  height: 40px;
+  top:-39px;
+  right:-40px;
+
+  }
+
+.button__save {
+  margin-top:48px;
+  }
+}
