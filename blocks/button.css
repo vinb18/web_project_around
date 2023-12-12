@@ -93,8 +93,12 @@
 
 .button__delete {
   width:18px;
+  height:19.3px;
   background: url(../images/trash.svg) no-repeat center;
   border:none;
+  position:absolute;
+  top:18px;
+  right:15px;
 }
 
 @media screen and (min-width: 1280px) {
