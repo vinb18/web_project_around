@@ -17,6 +17,7 @@ const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardTitle = document.querySelector(".element__title");
 const cardUrl = document.querySelector(".element__image");
+const cardForm = document.querySelector(".popup__form_add");
 
 
 function togglePopup(popup){
@@ -53,6 +54,8 @@ profileForm.addEventListener("submit",function(event){
     profileJob.textContent = inputJob.value;
     togglePopup(popupProfile)
 })
+
+
 
 const initialCards = [
   {
