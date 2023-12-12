@@ -91,6 +91,12 @@
   color:white;
 }
 
+.button__delete {
+  width:18px;
+  background: url(../images/trash.svg) no-repeat center;
+  border:none;
+}
+
 @media screen and (min-width: 1280px) {
 
 .button__add {

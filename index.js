@@ -92,11 +92,16 @@ function createCard(name, link){
   const cardTemplate = document.querySelector("#card-template").content.cloneNode(true);
   cardTemplate.querySelector(".element__title").textContent = name;
   cardTemplate.querySelector(".element__image").src = link;
+  const deleteButton = cardTemplate.querySelector('.button__delete');
+  deleteButton.addEventListener('click', function(){
+    cardTemplate.remove();
+  });
   const likeButton = cardTemplate.querySelector('.button__like');
   likeButton.addEventListener('click', function(){
     toggleLike(likeButton);
 
   });
   return cardTemplate;
+
 }
 
