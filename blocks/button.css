@@ -101,6 +101,10 @@
   right:15px;
 }
 
+.button__delete:hover {
+  opacity:0.8;
+}
+
 @media screen and (min-width: 1280px) {
 
 .button__add {

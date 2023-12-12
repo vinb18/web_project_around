@@ -13,6 +13,10 @@ const elements = document.querySelector(".elements");
 const buttonAdd = document.querySelector(".button__add");
 const popupAdd = document.querySelector(".popup_add");
 const buttonCloseAdd = document.querySelector(".button__close_add");
+const inputTitle = document.querySelector(".popup__item_title");
+const inputUrl = document.querySelector(".popup__item_url");
+const cardTitle = document.querySelector(".element__title");
+const cardUrl = document.querySelector(".element__image");
 
 
 function togglePopup(popup){
@@ -89,19 +93,21 @@ initialCards.forEach((item)=>{
 
 //Configurar valores de la tarjeta
 function createCard(name, link){
-  const cardTemplate = document.querySelector("#card-template").content.cloneNode(true);
-  cardTemplate.querySelector(".element__title").textContent = name;
-  cardTemplate.querySelector(".element__image").src = link;
-  const deleteButton = cardTemplate.querySelector('.button__delete');
+  const cardTemplate = document.querySelector("#card-template").content
+  const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
+  cardElement.querySelector(".element__title").textContent = name;
+  cardElement.querySelector(".element__image").src = link;
+  const deleteButton = cardElement.querySelector('.button__delete');
   deleteButton.addEventListener('click', function(){
-    cardTemplate.remove();
+    cardElement.remove();
+
   });
-  const likeButton = cardTemplate.querySelector('.button__like');
+  const likeButton = cardElement.querySelector('.button__like');
   likeButton.addEventListener('click', function(){
     toggleLike(likeButton);
 
   });
-  return cardTemplate;
+  return cardElement;
 
 }
 
