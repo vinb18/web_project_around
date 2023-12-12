@@ -53,6 +53,10 @@
   display:flex;
 }
 
+.popup__opened_add {
+  display:flex;
+}
+
 .popup__overlay {
   width:100%;
   height:100%;
@@ -66,7 +70,12 @@
   border:none;
   margin:0;
   padding: 0 .75em;
+  text-align: center;
  }
+
+.popup__item_add_url {
+  margin-top:30px
+}
 
 @media screen and (min-width: 1280px) {
 

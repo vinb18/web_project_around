@@ -99,6 +99,24 @@
     </div>
   </div>
 
+  <div class="popup popup_add">
+    <div class="popup__overlay popup__overlay_add"></div>
+    <div class="popup__container popup__container_add">
+      <button type="button" class="button button__close_add">
+      </button>
+      <form class="popup__form popup__form_add">
+        <span class="popup__heading popup__heading_add">Nuevo lugar</span>
+        <fieldset class="popup__set popup__set_add">
+          <input class="popup__item popup__item_add_title" id="title" name="title" placeholder="Título"
+            required></input>
+          <input class="popup__item popup__item_add_url" id="url" name="url" placeholder="Enlace a la imagen"
+            required></input>
+        </fieldset>
+        <button type="save" class="button button__create">Crear</button>
+      </form>
+    </div>
+  </div>
+
   <template id="card-template">
     <div class="element">
       <img class="element__image" src="" alt="">

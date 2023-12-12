@@ -24,6 +24,16 @@
   right:0;
 }
 
+.button__close_add {
+  background:url(../../../images/closeicon.svg) no-repeat center;
+  width: 26px;
+  height: 26px;
+  position:absolute;
+  border:none;
+  top:-39px;
+  right:0;
+}
+
 .button__close:hover {
   opacity:0.6;
 }
@@ -51,6 +61,14 @@
   opacity:0.5;
 }
 
+.button__like_black {
+  width: 20.76px;
+  height:18.13px;
+  background: url(../images/likebuttonblack.svg);
+  border:none;
+  fill:#000;
+}
+
 .button__save{
   width:238px;
   height:46px;
@@ -62,6 +80,15 @@
 
 .button__save:hover {
   opacity:0.8;
+}
+
+.button__create{
+  width:238px;
+  height:46px;
+  background: #000;
+  border-radius: 2px;
+  margin-top:45px;
+  color:white;
 }
 
 @media screen and (min-width: 1280px) {
@@ -79,6 +106,11 @@
   }
 
 .button__save {
+  margin-top:48px;
+  }
+
+.button__create{
+  width: 358px;
   margin-top:48px;
   }
 }

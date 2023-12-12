@@ -10,8 +10,18 @@ const inputName = document.querySelector(".popup__item_name")
 const inputJob = document.querySelector(".popup__item_job")
 const elements = document.querySelector(".elements");
 
+const buttonAdd = document.querySelector(".button__add");
+const popupAdd = document.querySelector(".popup_add");
+const buttonCloseAdd = document.querySelector(".button__close_add");
+
+
 function togglePopup(popup){
     popup.classList.toggle("popup__opened");
+
+    }
+
+function toggleLike(button__like){
+    button__like.classList.toggle("button__like_black");
 
     }
 
@@ -19,6 +29,14 @@ buttonEdit.addEventListener("click",function(){
   inputName.value = profileName.textContent;
   inputJob.value = profileJob.textContent;
     togglePopup(popupProfile);
+});
+
+buttonAdd.addEventListener("click",function(){
+    togglePopup(popupAdd);
+});
+
+buttonCloseAdd.addEventListener("click",function(){
+  togglePopup(popupAdd);
 });
 
 buttonClose.addEventListener("click",function(){
@@ -76,6 +94,7 @@ function createCard(name, link){
   cardTemplate.querySelector(".element__image").src = link;
   const likeButton = cardTemplate.querySelector('.button__like');
   likeButton.addEventListener('click', function(){
+    toggleLike(likeButton);
 
   });
   return cardTemplate;
