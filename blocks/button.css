@@ -6,7 +6,7 @@
 .button__add {
   width: 282px;
   height: 50px;
-  background: url(../../../images/addbutton.svg) no-repeat center;
+  background: url(../images/addbutton.svg) no-repeat center;
   border-radius: 2px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .button__close {
-  background:url(../../../images/closeicon.svg) no-repeat center;
+  background:url(../images/closeicon.svg) no-repeat center;
   width: 26px;
   height: 26px;
   position:absolute;
@@ -25,7 +25,7 @@
 }
 
 .button__close_add {
-  background:url(../../../images/closeicon.svg) no-repeat center;
+  background:url(../images/closeicon.svg) no-repeat center;
   width: 26px;
   height: 26px;
   position:absolute;
@@ -41,7 +41,7 @@
 .button__edit {
   width:18px;
   height:18px;
-  background: url(../../../images/editbutton.svg) no-repeat center;
+  background: url(../images/editbutton.svg) no-repeat center;
   box-sizing: border-box;
   flex-shrink:0;
 }
@@ -53,7 +53,7 @@
 .button__like {
   width: 20.76px;
   height:18.13px;
-  background: url(../../../images/corazon.svg);
+  background: url(../images/corazon.svg);
   border:none;
 }
 
@@ -89,6 +89,10 @@
   border-radius: 2px;
   margin-top:45px;
   color:white;
+}
+
+.button__create:hover {
+  opacity:0.8;
 }
 
 .button__delete {

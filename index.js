@@ -55,7 +55,14 @@ profileForm.addEventListener("submit",function(event){
     togglePopup(popupProfile)
 })
 
-
+ cardForm.addEventListener("submit",function(event) {
+  event.preventDefault();
+  cardTitle.textContent = inputTitle.value;
+  cardUrl.textContent = inputUrl.value;
+  const newCard= createCard(inputTitle.value, inputUrl.value)
+  elementsSection.prepend(newCard);
+  popupAdd.classList.remove("popup__opened_add");
+});
 
 const initialCards = [
   {
