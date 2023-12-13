@@ -110,12 +110,21 @@ function createCard(name, link){
     cardElement.remove();
 
   });
+
+  const clickImage = cardElement.querySelector('.element__image');
+  clickImage.addEventListener('click', function(){
+    clickImage.classList.toggle("popup__opened")
+
+  });
+
   const likeButton = cardElement.querySelector('.button__like');
   likeButton.addEventListener('click', function(){
     toggleLike(likeButton);
 
   });
   return cardElement;
+
+
 
 }
 
