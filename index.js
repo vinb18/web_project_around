@@ -18,6 +18,7 @@ const inputUrl = document.querySelector(".popup__item_url");
 const cardTitle = document.querySelector(".element__title");
 const cardUrl = document.querySelector(".element__image");
 const cardForm = document.querySelector(".popup__form_add");
+const popupImage = document.querySelector(".popup_image");
 
 
 function togglePopup(popup){
@@ -113,7 +114,8 @@ function createCard(name, link){
 
   const clickImage = cardElement.querySelector('.element__image');
   clickImage.addEventListener('click', function(){
-    clickImage.classList.toggle("popup__opened")
+    popupImage.classList.toggle("popup__opened");
+    popupImage.querySelector('img').src = link;
 
   });
 

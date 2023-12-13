@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: center;
   display:none;
+  transition: all 2s ease;
+  pointer-events: none;
 }
 
 .popup__container {
@@ -17,6 +19,11 @@
   border-radius: 10px;
   position:relative;
   z-index:2;
+}
+
+.popup__container_image {
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 .popup__form {
@@ -51,6 +58,7 @@
 
 .popup__opened {
   display:flex;
+  pointer-events: all;
 }
 
 .popup__overlay {
@@ -71,6 +79,12 @@
 
 .popup__item_url {
   margin-top:30px
+}
+
+.popup__image {
+  width:433px;
+  max-height:540px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1280px) {
