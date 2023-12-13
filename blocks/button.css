@@ -34,6 +34,16 @@
   right:0;
 }
 
+.button__close_image {
+  background:url(../images/closeicon.svg) no-repeat center;
+  width: 26px;
+  height: 26px;
+  position:absolute;
+  border:none;
+  top:-39px;
+  right:0;
+}
+
 .button__close:hover {
   opacity:0.6;
 }

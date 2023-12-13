@@ -49,6 +49,7 @@ buttonClose.addEventListener("click",function(){
     togglePopup(popupProfile);
 });
 
+
 profileForm.addEventListener("submit",function(event){
     event.preventDefault();
     profileName.textContent = inputName.value;
@@ -60,7 +61,8 @@ profileForm.addEventListener("submit",function(event){
   event.preventDefault();
   const newCard= createCard(inputTitle.value, inputUrl.value)
   elementsSection.prepend(newCard);
-  popupAdd.classList.remove("popup__opened_add");
+  cardForm.reset();
+  togglePopup(popupAdd);
 });
 
 const initialCards = [
@@ -100,6 +102,11 @@ initialCards.forEach((item)=>{
    elementsSection.append(newCard);
 })
 
+const buttonCloseImage = document.querySelector('.button__close_image')
+  buttonCloseImage.addEventListener("click",function(){
+    togglePopup(popupImage);
+  });
+
 //Configurar valores de la tarjeta
 function createCard(name, link){
   const cardTemplate = document.querySelector("#card-template").content
@@ -116,6 +123,7 @@ function createCard(name, link){
   clickImage.addEventListener('click', function(){
     popupImage.classList.toggle("popup__opened");
     popupImage.querySelector('img').src = link;
+    popupImage.querySelector('.popup__title').textContent = name;
 
   });
 

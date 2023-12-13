@@ -22,8 +22,8 @@
 }
 
 .popup__container_image {
-  max-width: 75vw;
-  max-height: 75vh;
+  width: 240px;
+  height: 299px;
 }
 
 .popup__form {
@@ -87,11 +87,22 @@
   object-fit: cover;
 }
 
+.popup__title {
+  color: #FFF;
+  font-size: 12px;
+  line-height: normal;
+}
+
 @media screen and (min-width: 1280px) {
 
   .popup__container {
     width:430px;
     height:330px;
+  }
+
+  .popup__container_image {
+    max-width:75vw;
+    max-height: 75vh;
   }
 
   .popup__heading {
