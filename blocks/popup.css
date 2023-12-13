@@ -82,8 +82,8 @@
 }
 
 .popup__image {
-  width:433px;
-  max-height:540px;
+  width:240px;
+  height:299px;
   object-fit: cover;
 }
 
@@ -112,5 +112,11 @@
 
   .popup__set {
     width:83%
+  }
+
+  .popup__image {
+    width:433px;
+    height:540px;
+    object-fit: cover;
   }
 }
