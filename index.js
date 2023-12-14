@@ -1,6 +1,6 @@
-const buttonEdit = document.querySelector(".button_edit");
+const buttonEdit = document.querySelector(".button__edit");
 const popupProfile = document.querySelector(".popup");
-const buttonClose = document.querySelector(".button_close");
+const buttonClose = document.querySelector(".button__close");
 const buttonLike = document.querySelector("button__like");
 
 const profileName = document.querySelector(".profile__name");
@@ -10,13 +10,13 @@ const inputName = document.querySelector(".popup__item_name")
 const inputJob = document.querySelector(".popup__item_job")
 const elements = document.querySelector(".elements");
 
-const buttonAdd = document.querySelector(".button_add");
+const buttonAdd = document.querySelector(".button__add");
 const popupAdd = document.querySelector(".popup_add");
-const buttonCloseAdd = document.querySelector(".button_close_add");
+const buttonCloseAdd = document.querySelector(".button__close_add");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
-const cardTitle = document.querySelector(".element__title");
-const cardUrl = document.querySelector(".element__image");
+/* const cardTitle = document.querySelector(".element__title"); */
+/* const cardUrl = document.querySelector(".element__image"); */
 const cardForm = document.querySelector(".popup__form_add");
 const popupImage = document.querySelector(".popup_image");
 
@@ -102,7 +102,7 @@ initialCards.forEach((item)=>{
    elementsSection.append(newCard);
 })
 
-const buttonCloseImage = document.querySelector('.button_close_image')
+const buttonCloseImage = document.querySelector('.button__close_image')
   buttonCloseImage.addEventListener("click",function(){
     togglePopup(popupImage);
   });

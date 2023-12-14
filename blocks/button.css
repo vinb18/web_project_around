@@ -1,20 +1,24 @@
 .button {
   border:1px solid #FFF;
   cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.button_add {
+.button__add {
   width: 282px;
   height: 50px;
   background: url(../images/addbutton.svg) no-repeat center;
   border-radius: 2px;
+  border:1px solid #FFF;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.button_add:hover {
+.button__add:hover {
   opacity:0.6;
 }
 
-.button_close {
+.button__close {
   background:url(../images/closeicon.svg) no-repeat center;
   width: 26px;
   height: 26px;
@@ -22,9 +26,11 @@
   border:none;
   top:-39px;
   right:0;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.button_close_add {
+.button__close_add {
   background:url(../images/closeicon.svg) no-repeat center;
   width: 26px;
   height: 26px;
@@ -32,9 +38,11 @@
   border:none;
   top:-39px;
   right:0;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.button_close_image {
+.button__close_image {
   background:url(../images/closeicon.svg) no-repeat center;
   width: 26px;
   height: 26px;
@@ -42,19 +50,24 @@
   border:none;
   top:-39px;
   right:0;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
-*/
 
-.button_close:hover {
+
+.button__close:hover {
   opacity:0.6;
 }
 
-.button_edit {
+.button__edit {
   width:18px;
   height:18px;
   background: url(../images/editbutton.svg) no-repeat center;
   box-sizing: border-box;
   flex-shrink:0;
+  border:1px solid #FFF;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .button__edit:hover {
@@ -122,11 +135,11 @@
 
 @media screen and (min-width: 1280px) {
 
-.button_add {
+.button__add {
   width:150px;
   }
 
-.button_close {
+.button__close {
   width: 40px;
   height: 40px;
   top:-39px;
