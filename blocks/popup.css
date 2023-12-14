@@ -7,8 +7,9 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  display:none;
-  transition: all 5s ease-in-out;
+  display:flex;
+  /* display:none; */
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   transform: translateY(20px);
   visibility:hidden;
@@ -26,6 +27,8 @@
 .popup__container_image {
   width: 240px;
   height: 299px;
+  position:absolute;
+  top:130px;
 }
 
 .popup__form {
