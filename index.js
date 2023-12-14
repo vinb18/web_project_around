@@ -12,7 +12,7 @@ const elements = document.querySelector(".elements");
 
 const buttonAdd = document.querySelector(".button_add");
 const popupAdd = document.querySelector(".popup_add");
-const buttonCloseAdd = document.querySelector(".button_close-add");
+const buttonCloseAdd = popupAdd.querySelector(".button_close");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.querySelector(".popup__form_add");
@@ -100,7 +100,7 @@ initialCards.forEach((item)=>{
    elementsSection.append(newCard);
 })
 
-const buttonCloseImage = document.querySelector('.button_close-image')
+const buttonCloseImage = popupImage.querySelector('.button_close')
   buttonCloseImage.addEventListener("click",function(){
     togglePopup(popupImage);
   });
