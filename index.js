@@ -1,7 +1,7 @@
-const buttonEdit = document.querySelector(".button__edit");
+const buttonEdit = document.querySelector(".button_edit");
 const popupProfile = document.querySelector(".popup");
-const buttonClose = document.querySelector(".button__close");
-const buttonLike = document.querySelector("button__like");
+const buttonClose = document.querySelector(".button_close");
+const buttonLike = document.querySelector("button_like");
 
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
@@ -10,13 +10,11 @@ const inputName = document.querySelector(".popup__item_name")
 const inputJob = document.querySelector(".popup__item_job")
 const elements = document.querySelector(".elements");
 
-const buttonAdd = document.querySelector(".button__add");
+const buttonAdd = document.querySelector(".button_add");
 const popupAdd = document.querySelector(".popup_add");
-const buttonCloseAdd = document.querySelector(".button__close_add");
+const buttonCloseAdd = document.querySelector(".button_close-add");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
-/* const cardTitle = document.querySelector(".element__title"); */
-/* const cardUrl = document.querySelector(".element__image"); */
 const cardForm = document.querySelector(".popup__form_add");
 const popupImage = document.querySelector(".popup_image");
 
@@ -26,8 +24,8 @@ function togglePopup(popup){
 
     }
 
-function toggleLike(button__like){
-    button__like.classList.toggle("button__like_black");
+function toggleLike(button_like){
+    button_like.classList.toggle("button_like-black");
 
     }
 
@@ -102,7 +100,7 @@ initialCards.forEach((item)=>{
    elementsSection.append(newCard);
 })
 
-const buttonCloseImage = document.querySelector('.button__close_image')
+const buttonCloseImage = document.querySelector('.button_close-image')
   buttonCloseImage.addEventListener("click",function(){
     togglePopup(popupImage);
   });
@@ -113,7 +111,7 @@ function createCard(name, link){
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
   cardElement.querySelector(".element__title").textContent = name;
   cardElement.querySelector(".element__image").src = link;
-  const deleteButton = cardElement.querySelector('.button__delete');
+  const deleteButton = cardElement.querySelector('.button_delete');
   deleteButton.addEventListener('click', function(){
     cardElement.remove();
 
@@ -127,7 +125,7 @@ function createCard(name, link){
 
   });
 
-  const likeButton = cardElement.querySelector('.button__like');
+  const likeButton = cardElement.querySelector('.button_like');
   likeButton.addEventListener('click', function(){
     toggleLike(likeButton);
 
