@@ -110,7 +110,10 @@ function createCard(name, link){
   const cardTemplate = document.querySelector("#card-template").content
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
   cardElement.querySelector(".element__title").textContent = name;
-  cardElement.querySelector(".element__image").src = link;
+  const cardImage = cardElement.querySelector(".element__image");
+  cardImage.src = link;
+  cardImage.setAttribute('alt', name);
+
   const deleteButton = cardElement.querySelector('.button_delete');
   deleteButton.addEventListener('click', function(){
     cardElement.remove();

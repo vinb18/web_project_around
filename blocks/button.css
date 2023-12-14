@@ -35,9 +35,6 @@
   background: url(../images/editbutton.svg) no-repeat center;
   box-sizing: border-box;
   flex-shrink:0;
-  border:1px solid #FFF;
-  cursor:pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 .button_edit:hover {
