@@ -66,27 +66,27 @@ profileForm.addEventListener("submit",function(event){
 const initialCards = [
   {
     name: "Arizona",
-    link: "https://images.unsplash.com/photo-1692648545854-75939d9f9fc1?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    link: "./images/Arizona.jpg"
   },
   {
-    name: "Cañón de la providencia",
-    link: "https://images.unsplash.com/photo-1550079776-91e7db5606d8?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    name: "Gatlinburg",
+    link: "./images/Gatlinburg.jpg"
   },
   {
-    name: "Utah",
-    link: "https://images.unsplash.com/photo-1589083067039-e4481dc1808d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    name: "Oregon",
+    link: "./images/Oregon.jpg"
   },
   {
-    name: "Bellingham",
-    link: "https://images.unsplash.com/photo-1516690553959-71a414d6b9b6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    name: "Washington",
+    link: "./images/Washington.jpg"
   },
   {
-    name: "Parque Nacional Monte Rainer",
-    link: "https://images.unsplash.com/photo-1692648545854-75939d9f9fc1?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    name: "Yellowstone",
+    link: "./images/Yellowstone.jpg"
   },
   {
-    name: "Cataratas Butte",
-    link: "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    name: "Parque Nacional Zion",
+    link: "./images/Zion.jpg"
   }
 ];
 
