@@ -12,6 +12,8 @@
   width:282px;
   height:282px;
   object-fit: cover;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .element__info {
