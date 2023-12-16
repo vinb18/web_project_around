@@ -17,6 +17,7 @@ const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.querySelector(".popup__form_add");
 const popupImage = document.querySelector(".popup_image");
+const buttonCloseImage = popupImage.querySelector('.button_close')
 
 
 function togglePopup(popup){
@@ -47,6 +48,9 @@ buttonClose.addEventListener("click",function(){
     togglePopup(popupProfile);
 });
 
+buttonCloseImage.addEventListener("click",function(){
+  togglePopup(popupImage);
+});
 
 profileForm.addEventListener("submit",function(event){
     event.preventDefault();
@@ -63,6 +67,7 @@ profileForm.addEventListener("submit",function(event){
   togglePopup(popupAdd);
 });
 
+//Array
 const initialCards = [
   {
     name: "Arizona",
@@ -99,11 +104,6 @@ initialCards.forEach((item)=>{
   const newCard= createCard(item.name, item.link);
    elementsSection.append(newCard);
 })
-
-const buttonCloseImage = popupImage.querySelector('.button_close')
-  buttonCloseImage.addEventListener("click",function(){
-    togglePopup(popupImage);
-  });
 
 //Configurar valores de la tarjeta
 function createCard(name, link){
