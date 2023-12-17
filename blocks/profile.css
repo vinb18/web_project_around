@@ -48,6 +48,9 @@
   font-weight: 500;
   line-height: normal;
   margin:0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
  }
 
 @media screen and (min-width: 1280px) {
@@ -79,5 +82,9 @@
       font-size: 2.6em;
       line-height: 114%;
 
+    }
+
+    .profile__edit {
+      width: 430px;
     }
   }
