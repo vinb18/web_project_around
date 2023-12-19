@@ -14,6 +14,7 @@
   object-fit: cover;
   cursor:pointer;
   transition: all 0.3s ease-in-out;
+  background-color: #000;
 }
 
 .element__info {
