@@ -136,7 +136,7 @@ function createCard(name, link){
   });
   return cardElement;
 
-
-
 }
 
+console.log(document.forms.add);
+console.log(document.forms.edit);
