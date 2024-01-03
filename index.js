@@ -174,7 +174,5 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-const forms = document.querySelectorAll("form");
-
 console.log(document.forms.add);
 console.log(document.forms.edit);

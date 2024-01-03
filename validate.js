@@ -16,21 +16,30 @@ profileForm.addEventListener("input", function (event) {
   setSubmitButtonState(isValid);
 });
 
+function isValidUrl(string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
 cardForm.addEventListener("input", function (event) {
   event.preventDefault();
   const isValid = inputTitle.value.length > 1 && isValidUrl(inputUrl.value);
   setSubmitButtonStateAdd(isValid);
 });
 
-const showError = (input, errorMessage) => {
-  const formError = profileForm.querySelector(`#${input.id}-error`);
+const showError = (form, input, errorMessage) => {
+  const formError = form.querySelector(`#${input.id}-error`);
   input.classList.add("popup__item-error");
   formError.textContent = errorMessage;
   formError.classList.add("popup__item-error_active");
 };
 
-const hideError = (input) => {
-  const formError = profileForm.querySelector(`#${input.id}-error`);
+const hideError = (form, input) => {
+  const formError = form.querySelector(`#${input.id}-error`);
   input.classList.remove("popup__item-error");
   formError.classList.remove("popup__item-error_active");
   formError.textContent = "";
@@ -43,12 +52,3 @@ const checkInputValidity = () => {
     hideError(formItem);
   }
 };
-
-function isValidUrl(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (_) {
-    return false;
-  }
-}
