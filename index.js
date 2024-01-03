@@ -7,8 +7,6 @@ const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 const profileForm = document.forms.edit;
 const inputName = profileForm.elements.name;
-/* const inputName = document.querySelector(".popup__item_name") */
-/* const inputJob = document.querySelector(".popup__item_job") */
 const job = profileForm.elements.job;
 const elements = document.querySelector(".elements");
 
@@ -23,28 +21,6 @@ const popupImage = document.querySelector(".popup_image");
 const buttonCloseImage = popupImage.querySelector(".button_close");
 const buttonSave = document.querySelector(".button_save");
 const formItem = profileForm.querySelector(".popup__item");
-
-const showError = (input, errorMessage) => {
-  const formError = profileForm.querySelector(`#${input.id}-error`);
-  input.classList.add("popup__item-error");
-  formError.textContent = errorMessage;
-  formError.classList.add("popup__item-error_active");
-};
-
-const hideError = (input) => {
-  const formError = profileForm.querySelector(`#${input.id}-error`);
-  input.classList.remove("popup__item-error");
-  formError.classList.remove("popup__item-error_active");
-  formError.textContent = "";
-};
-
-const checkInputValidity = () => {
-  if (!formItem.validity.valid) {
-    showError(formItem, formItem.validationMessage);
-  } else {
-    hideError(formItem);
-  }
-};
 
 function togglePopup(popup) {
   popup.classList.toggle("popup__opened");
@@ -95,12 +71,6 @@ profileForm.addEventListener("submit", function (event) {
   setSubmitButtonState(false);
 });
 
-profileForm.addEventListener("input", function (event) {
-  event.preventDefault();
-  const isValid = inputName.value.length > 1 && job.value.length > 1;
-  setSubmitButtonState(isValid);
-});
-
 function setSubmitButtonStateAdd(isFormValid) {
   if (isFormValid) {
     buttonSaveAdd.removeAttribute("disabled");
@@ -111,15 +81,6 @@ function setSubmitButtonStateAdd(isFormValid) {
   }
 }
 
-function isValidUrl(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (_) {
-    return false;
-  }
-}
-
 cardForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const newCard = createCard(inputTitle.value, inputUrl.value);
@@ -127,12 +88,6 @@ cardForm.addEventListener("submit", function (event) {
   cardForm.reset();
   togglePopup(popupAdd);
   setSubmitButtonStateAdd(false);
-});
-
-cardForm.addEventListener("input", function (event) {
-  event.preventDefault();
-  const isValid = inputTitle.value.length > 1 && isValidUrl(inputUrl.value);
-  setSubmitButtonStateAdd(isValid);
 });
 
 //Array
@@ -207,6 +162,19 @@ function showPopup(popupImageElement, linkUrl, placeName) {
 function removeCard(cardElement) {
   cardElement.remove();
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const popups = document.querySelectorAll(".popup");
+    popups.forEach((popup) => {
+      if (popup.classList.contains("popup__opened")) {
+        togglePopup(popup);
+      }
+    });
+  }
+});
+
+const forms = document.querySelectorAll("form");
 
 console.log(document.forms.add);
 console.log(document.forms.edit);
