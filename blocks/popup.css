@@ -7,120 +7,123 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  display:flex;
+  display: flex;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   transform: translateY(20px);
-  visibility:hidden;
+  visibility: hidden;
 }
 
 .popup__container {
-  width:282px;
-  height:322px;
-  background-color:white;
+  width: 282px;
+  height: 322px;
+  background-color: white;
   border-radius: 10px;
-  position:relative;
-  z-index:2;
+  position: relative;
+  z-index: 2;
 }
 
 .popup__container_image {
   width: 240px;
   height: 299px;
-  position:absolute;
-  top:130px;
+  position: absolute;
+  top: 130px;
 }
 
 .popup__form {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  position:relative;
+  position: relative;
 }
 
 .popup__heading {
-  width:238px;
+  width: 238px;
   color: #000;
   font-size: 18px;
   font-weight: 900;
-  margin:0;
-  padding-bottom:75px;
-  padding-top:25px;
+  margin: 0;
+  padding-bottom: 75px;
+  padding-top: 25px;
 }
 
 .popup__item {
-  width:238px;
-  height:14px;
+  width: 238px;
+  height: 14px;
   font-size: 14px;
-  border:none;
-  padding-bottom:13px;
+  border: none;
+  padding-bottom: 13px;
   border-bottom: 0.7px solid #545454;
 }
 
+.popup__item:invalid {
+  border-bottom: 1px solid red;
+}
+
 .popup__item_job {
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .popup__opened {
-  display:flex;
-  opacity:1;
+  display: flex;
+  opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
 .popup__overlay {
-  width:100%;
-  height:100%;
-  position:absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   opacity: 0.7;
   background: #000;
-  z-index:1;
+  z-index: 1;
 }
 
 .popup__set {
-  border:none;
-  margin:0;
-  padding: 0 .75em;
+  border: none;
+  margin: 0;
+  padding: 0 0.75em;
   text-align: center;
- }
+}
 
 .popup__item_url {
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .popup__image {
-  width:240px;
-  height:299px;
+  width: 240px;
+  height: 299px;
   object-fit: cover;
 }
 
 .popup__title {
-  color: #FFF;
+  color: #fff;
   font-size: 12px;
   line-height: normal;
 }
 
 @media screen and (min-width: 1280px) {
-
   .popup__container {
-    width:430px;
-    height:330px;
+    width: 430px;
+    height: 330px;
   }
 
   .popup__container_image {
-    max-width:75vw;
+    max-width: 75vw;
     max-height: 75vh;
   }
 
   .popup__heading {
-    width:360px;
-    font-size:24px;
-    padding-top:34px;
-    padding-bottom:54px;
+    width: 360px;
+    font-size: 24px;
+    padding-top: 34px;
+    padding-bottom: 54px;
   }
 
   .popup__item {
-    width:358px;
-    height:14px;
+    width: 358px;
+    height: 14px;
   }
 
   .popup__item_job {
@@ -128,12 +131,12 @@
   }
 
   .popup__set {
-    width:83%;
+    width: 83%;
   }
 
   .popup__image {
-    width:433px;
-    height:540px;
+    width: 433px;
+    height: 540px;
     object-fit: cover;
   }
 }

@@ -15,11 +15,36 @@ const elements = document.querySelector(".elements");
 const buttonAdd = document.querySelector(".button_add");
 const popupAdd = document.querySelector(".popup_add");
 const buttonCloseAdd = popupAdd.querySelector(".button_close");
+const buttonSaveAdd = popupAdd.querySelector(".button_save");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
 const popupImage = document.querySelector(".popup_image");
 const buttonCloseImage = popupImage.querySelector(".button_close");
+const buttonSave = document.querySelector(".button_save");
+const formItem = profileForm.querySelector(".popup__item");
+
+const showError = (input, errorMessage) => {
+  const formError = profileForm.querySelector(`#${input.id}-error`);
+  input.classList.add("popup__item-error");
+  formError.textContent = errorMessage;
+  formError.classList.add("popup__item-error_active");
+};
+
+const hideError = (input) => {
+  const formError = profileForm.querySelector(`#${input.id}-error`);
+  input.classList.remove("popup__item-error");
+  formError.classList.remove("popup__item-error_active");
+  formError.textContent = "";
+};
+
+const checkInputValidity = () => {
+  if (!formItem.validity.valid) {
+    showError(formItem, formItem.validationMessage);
+  } else {
+    hideError(formItem);
+  }
+};
 
 function togglePopup(popup) {
   popup.classList.toggle("popup__opened");
@@ -51,20 +76,49 @@ buttonCloseImage.addEventListener("click", function () {
   togglePopup(popupImage);
 });
 
+//Llamae a la función que desactiva el botón
+function setSubmitButtonState(isFormValid) {
+  if (isFormValid) {
+    buttonSave.removeAttribute("disabled");
+    buttonSave.classList.remove("button_save_disabled");
+  } else {
+    buttonSave.setAttribute("disabled", true);
+    buttonSave.classList.add("button_save_disabled");
+  }
+}
+
 profileForm.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = job.value;
   togglePopup(popupProfile);
+  setSubmitButtonState(false);
 });
 
 profileForm.addEventListener("input", function (event) {
   event.preventDefault();
-  const isValid = inputName.value.length > 0 && job.value.length > 0;
+  const isValid = inputName.value.length > 1 && job.value.length > 1;
+  setSubmitButtonState(isValid);
 });
 
-//Llamae a la función que desactiva el botón
-/* function setSubmitButtonState */
+function setSubmitButtonStateAdd(isFormValid) {
+  if (isFormValid) {
+    buttonSaveAdd.removeAttribute("disabled");
+    buttonSaveAdd.classList.remove("button_save_disabled");
+  } else {
+    buttonSaveAdd.setAttribute("disabled", true);
+    buttonSaveAdd.classList.add("button_save_disabled");
+  }
+}
+
+function isValidUrl(string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
 
 cardForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -72,6 +126,13 @@ cardForm.addEventListener("submit", function (event) {
   elementsSection.prepend(newCard);
   cardForm.reset();
   togglePopup(popupAdd);
+  setSubmitButtonStateAdd(false);
+});
+
+cardForm.addEventListener("input", function (event) {
+  event.preventDefault();
+  const isValid = inputTitle.value.length > 1 && isValidUrl(inputUrl.value);
+  setSubmitButtonStateAdd(isValid);
 });
 
 //Array
