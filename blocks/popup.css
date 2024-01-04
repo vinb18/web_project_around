@@ -43,7 +43,7 @@
   font-size: 18px;
   font-weight: 900;
   margin: 0;
-  padding-bottom: 75px;
+  padding-bottom: 45px;
   padding-top: 25px;
 }
 
@@ -91,10 +91,11 @@
 }
 
 .popup__set {
+  width: 238px;
   border: none;
   margin: 0;
   padding: 0 0.75em;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .popup__item_url {
@@ -128,7 +129,7 @@
     width: 360px;
     font-size: 24px;
     padding-top: 34px;
-    padding-bottom: 54px;
+    padding-bottom: 34px;
   }
 
   .popup__item {
