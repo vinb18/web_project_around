@@ -7,17 +7,24 @@ const enableValidation = ({
   errorClass,
 }) => {
   const formList = Array.from(document.querySelectorAll(formSelector));
+  console.log(formList);
   formList.forEach((formElement) => {
+    console.log(formElement);
     formElement.addEventListener("submit", function (event) {
       event.preventDefault();
     });
 
-    const inputList = Array.from(formElement.querySelectorAll(inputSelector));
+    const inputElements = formElement.querySelectorAll(inputSelector);
+    console.log(inputElements);
+
+    const inputList = Array.from(inputElements);
+    console.log(inputList);
     const buttonElement = formElement.querySelector(submitButtonSelector);
 
     toggleButtonState(inputList, buttonElement, inactiveButtonClass);
 
     inputList.forEach((inputElement) => {
+      console.log(inputElement);
       inputElement.addEventListener("input", function () {
         checkInputValidity(
           formElement,
@@ -76,16 +83,19 @@ const hideInputError = (
 };
 
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
-  if (hasInvalidInput(inputList)) {
+  console.log(inputList);
+
+  if (Array.isArray(inputList) && hasInvalidInput(inputList)) {
     buttonElement.classList.add(inactiveButtonClass);
     buttonElement.disabled = true;
-  } else {
+  } else if (buttonElement) {
     buttonElement.classList.remove(inactiveButtonClass);
     buttonElement.disabled = false;
-  }
+  } else return;
 };
 
 function hasInvalidInput(inputList) {
+  console.log(inputList);
   return inputList.some((inputElement) => {
     return !inputElement.validity.valid;
   });
