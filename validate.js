@@ -5,9 +5,9 @@
   formSelector: ".popup__form",
   inputSelector: ".popup__item",
   submitButtonSelector: ".button_save",
-  inactiveButtonClass: "button_disabled",
-  inputErrorClass: "popup__item-invalid",
-  errorClass: "popup__item-error_active",
+  inactiveButtonClass: ".button_save_disabled",
+  inputErrorClass: ".popup__item-invalid",
+  errorClass: ".popup__item-error_active",
 }); */
 
 /* const formSelector = document.querySelector(".popup__form");
