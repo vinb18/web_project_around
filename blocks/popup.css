@@ -60,8 +60,18 @@
   border-bottom: 1px solid red;
 }
 
+.popup__iteminvalid {
+  border-bottom: 1px solid red;
+}
+
 .popup__item_job {
   margin-top: 30px;
+}
+
+.popup__item-error_active {
+  font-size: 12px;
+  text-align: left;
+  color: #ff0000;
 }
 
 .popup__opened {

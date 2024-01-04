@@ -41,12 +41,12 @@
       <form class="popup__form" name="edit" novalidate>
         <span class="popup__heading">Edit profile</span>
         <fieldset class="popup__set">
-          <input class="popup__item popup__item_name" type="text" id="name" name="name" placeholder="Name" required
+          <input class="popup__item popup__item_name" type="text" id="username" name="name" placeholder="Name" required
             minlength="2" maxlength="40">
-          <span class="popup__item-error"></span>
+          <span class="username-error popup__item-error"></span>
           <input class="popup__item popup__item_job" type="text" id="job" name="job" placeholder="About me" required
             minlength="2" maxlength="200">
-          <span class="popup__item-error"></span>
+          <span class="job-error popup__item-error"></span>
         </fieldset>
         <button disabled type="submit" class="button button_save button_save_disabled">Save</button>
       </form>

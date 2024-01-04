@@ -20,7 +20,6 @@ const cardForm = document.forms.add;
 const popupImage = document.querySelector(".popup_image");
 const buttonCloseImage = popupImage.querySelector(".button_close");
 const buttonSave = document.querySelector(".button_save");
-const formItem = profileForm.querySelector(".popup__item");
 
 function togglePopup(popup) {
   popup.classList.toggle("popup__opened");
