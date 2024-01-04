@@ -56,7 +56,7 @@ profileForm.addEventListener("submit", function (event) {
   profileName.textContent = inputName.value;
   profileJob.textContent = job.value;
   togglePopup(popupProfile);
-  toggleButtonState(false);
+  toggleButtonState(true);
 });
 
 /* function setSubmitButtonStateAdd(isFormValid) {

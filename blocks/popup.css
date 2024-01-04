@@ -56,9 +56,9 @@
   border-bottom: 0.7px solid #545454;
 }
 
-.popup__item:invalid {
+/* .popup__item:invalid {
   border-bottom: 1px solid red;
-}
+} */
 
 .popup__item-invalid {
   border-bottom: 1px solid red;
