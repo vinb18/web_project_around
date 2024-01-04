@@ -10,10 +10,9 @@
   errorClass: "popup__item-error_active",
 }); */
 
-const formSelector = document.querySelector(".popup__form");
+/* const formSelector = document.querySelector(".popup__form");
 const inputSelector = formSelector.querySelector(".popup__item");
-
-const formError = formSelector.querySelector(`.${inputSelector.id}-error`);
+const formError = formSelector.querySelector(`.${inputSelector.id}-error`); */
 
 const isValid = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
@@ -41,15 +40,40 @@ const checkInputValidity = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
   } else {
-    hideError(formElement, inputElement);
+    hideInputError(formElement, inputElement);
+  }
+};
+
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    return !inputElement.validity.valid;
+  });
+};
+
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add("button_save_disabled");
+  } else {
+    buttonElement.classList.remove("button_save_disabled");
   }
 };
 
 const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".popup__item"));
+  const buttonElement = formElement.querySelector(".button_save");
+  console.log(formElement);
+  toggleButtonState(inputList, buttonElement);
+
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", () => {
+      isValid(formElement, inputElement);
+    });
+  });
+
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement);
+      toggleButtonState(inputList, buttonElement);
     });
   });
 };
@@ -60,6 +84,13 @@ const enableValidation = () => {
     formElement.addEventListener("submit", function (event) {
       event.preventDefault();
     });
+
+    /*  const fieldsetList = Array.from(
+      formElement.querySelectorAll(".popup__set")
+    );
+    fieldsetList.forEach((fieldset) => {
+      setEventListeners(fieldset);
+    }); */
 
     setEventListeners(formElement);
   });

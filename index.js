@@ -51,26 +51,15 @@ buttonCloseImage.addEventListener("click", function () {
   togglePopup(popupImage);
 });
 
-//Llamae a la función que desactiva el botón
-function setSubmitButtonState(isFormValid) {
-  if (isFormValid) {
-    buttonSave.removeAttribute("disabled");
-    buttonSave.classList.remove("button_save_disabled");
-  } else {
-    buttonSave.setAttribute("disabled", true);
-    buttonSave.classList.add("button_save_disabled");
-  }
-}
-
 profileForm.addEventListener("submit", function (event) {
   event.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = job.value;
   togglePopup(popupProfile);
-  setSubmitButtonState(false);
+  toggleButtonState(false);
 });
 
-function setSubmitButtonStateAdd(isFormValid) {
+/* function setSubmitButtonStateAdd(isFormValid) {
   if (isFormValid) {
     buttonSaveAdd.removeAttribute("disabled");
     buttonSaveAdd.classList.remove("button_save_disabled");
@@ -79,14 +68,15 @@ function setSubmitButtonStateAdd(isFormValid) {
     buttonSaveAdd.classList.add("button_save_disabled");
   }
 }
-
+ */
 cardForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const newCard = createCard(inputTitle.value, inputUrl.value);
   elementsSection.prepend(newCard);
   cardForm.reset();
   togglePopup(popupAdd);
-  setSubmitButtonStateAdd(false);
+  toggleButtonState(false);
+  /* toggleButtonState(false); */
 });
 
 //Array
