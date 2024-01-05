@@ -141,12 +141,11 @@ function removeCard(cardElement) {
 
 const overlays = document.querySelectorAll(".popup__overlay");
 
-overlays.forEach((popup) => {
-  console.log(popup);
-  popup.addEventListener("click", function (event) {
-    if (event.target === event.currentTarget) {
-      togglePopup(popup);
-    }
+overlays.forEach((overlay) => {
+  console.log(overlay);
+  overlay.addEventListener("click", function (event) {
+    const popup = overlay.closest(".popup");
+    togglePopup(popup);
   });
 });
 
