@@ -159,6 +159,3 @@ document.addEventListener("keydown", (event) => {
     });
   }
 });
-
-console.log(document.forms.add);
-console.log(document.forms.edit);
