@@ -56,27 +56,14 @@ profileForm.addEventListener("submit", function (event) {
   profileName.textContent = inputName.value;
   profileJob.textContent = job.value;
   togglePopup(popupProfile);
-  toggleButtonState(true);
 });
 
-/* function setSubmitButtonStateAdd(isFormValid) {
-  if (isFormValid) {
-    buttonSaveAdd.removeAttribute("disabled");
-    buttonSaveAdd.classList.remove("button_save_disabled");
-  } else {
-    buttonSaveAdd.setAttribute("disabled", true);
-    buttonSaveAdd.classList.add("button_save_disabled");
-  }
-}
- */
 cardForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const newCard = createCard(inputTitle.value, inputUrl.value);
   elementsSection.prepend(newCard);
   cardForm.reset();
   togglePopup(popupAdd);
-  toggleButtonState(false);
-  /* toggleButtonState(false); */
 });
 
 //Array
@@ -151,6 +138,17 @@ function showPopup(popupImageElement, linkUrl, placeName) {
 function removeCard(cardElement) {
   cardElement.remove();
 }
+
+const overlays = document.querySelectorAll(".popup__overlay");
+
+overlays.forEach((popup) => {
+  console.log(popup);
+  popup.addEventListener("click", function (event) {
+    if (event.target === event.currentTarget) {
+      togglePopup(popup);
+    }
+  });
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
