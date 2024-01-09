@@ -114,7 +114,7 @@
   opacity: 0.8;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 880px) {
   .button_add {
     width: 150px;
   }

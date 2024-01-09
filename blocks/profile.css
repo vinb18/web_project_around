@@ -1,22 +1,22 @@
 .profile {
-    padding: 2em 0 2.2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:#FFF;
+  padding: 2em 0 2.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
 }
 
 .profile__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
   gap: 30px;
 }
 
 .profile__edit {
-  display:flex;
-  gap:17px;
+  display: flex;
+  gap: 17px;
   align-items: center;
 }
 
@@ -26,14 +26,14 @@
 }
 
 .profile__info {
-  width:85%;
-  display:flex;
+  width: 85%;
+  display: flex;
   flex-wrap: wrap;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   padding: 1.6em 0 2.2em;
-  column-gap:10px;
-  gap:14px;
+  column-gap: 10px;
+  gap: 14px;
 }
 
 .profile__job {
@@ -41,50 +41,47 @@
   font-size: 0.8em;
   font-weight: 400;
   line-height: normal;
- }
+}
 
 .profile__name {
   font-size: 1.3em;
   font-weight: 500;
   line-height: normal;
-  margin:0;
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
- }
+}
 
-@media screen and (min-width: 1280px) {
-
+@media screen and (min-width: 880px) {
   .profile {
-    width:68%;
+    width: 100%;
     flex-direction: row;
-    padding:2.2em 0 3.1em;
-    justify-content:space-between;
-    }
-
-    .profile__content{
-      width:max-content;
-      flex-direction:row;
-    }
-
-    .profile__info {
-      padding: 1.3em 0 1.3em;
-      justify-content: flex-start;
-      align-items: flex-start;
-
-    }
-
-    .profile__job{
-      font-size: 18px;
-    }
-
-    .profile__name {
-      font-size: 2.6em;
-      line-height: 114%;
-
-    }
-
-    .profile__edit {
-      width: 430px;
-    }
+    padding: 2.2em 0 3.1em;
+    justify-content: space-between;
   }
+
+  .profile__content {
+    width: max-content;
+    flex-direction: row;
+  }
+
+  .profile__info {
+    padding: 1.3em 0 1.3em;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .profile__job {
+    font-size: 18px;
+  }
+
+  .profile__name {
+    font-size: 2.6em;
+    line-height: 114%;
+  }
+
+  .profile__edit {
+    width: 430px;
+  }
+}

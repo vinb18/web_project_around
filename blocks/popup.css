@@ -116,7 +116,7 @@
   line-height: normal;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 880px) {
   .popup__container {
     width: 430px;
     height: 330px;
