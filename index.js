@@ -41,14 +41,17 @@ buttonAdd.addEventListener("click", function () {
 
 buttonCloseAdd.addEventListener("click", function () {
   togglePopup(popupAdd);
+  document.removeEventListener("keydown", keyHandler);
 });
 
 buttonClose.addEventListener("click", function () {
   togglePopup(popupProfile);
+  document.removeEventListener("keydown", keyHandler);
 });
 
 buttonCloseImage.addEventListener("click", function () {
   togglePopup(popupImage);
+  document.removeEventListener("keydown", keyHandler);
 });
 
 profileForm.addEventListener("submit", function (event) {
@@ -133,6 +136,7 @@ function showPopup(popupImageElement, linkUrl, placeName) {
   popupImageElement.classList.toggle("popup__opened");
   popupImageElement.querySelector("img").src = linkUrl;
   popupImageElement.querySelector(".popup__title").textContent = placeName;
+  popupImageElement.setAttribute("alt", placeName);
 }
 
 function removeCard(cardElement) {
@@ -148,7 +152,7 @@ overlays.forEach((overlay) => {
   });
 });
 
-document.addEventListener("keydown", (event) => {
+/* document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     const popups = document.querySelectorAll(".popup");
     popups.forEach((popup) => {
@@ -157,4 +161,17 @@ document.addEventListener("keydown", (event) => {
       }
     });
   }
-});
+}); */
+
+function keyHandler(event) {
+  if (event.key === "Escape") {
+    const popups = document.querySelectorAll(".popup");
+    popups.forEach((popup) => {
+      if (popup.classList.contains("popup__opened")) {
+        togglePopup(popup);
+      }
+    });
+  }
+}
+
+document.addEventListener("keydown", keyHandler);
