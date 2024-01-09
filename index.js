@@ -142,7 +142,6 @@ function removeCard(cardElement) {
 const overlays = document.querySelectorAll(".popup__overlay");
 
 overlays.forEach((overlay) => {
-  console.log(overlay);
   overlay.addEventListener("click", function (event) {
     const popup = overlay.closest(".popup");
     togglePopup(popup);
