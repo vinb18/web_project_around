@@ -1,3 +1,15 @@
+@keyframes shake {
+  0% {
+    transform: translateX(-1.5px);
+  }
+  50% {
+    transform: translateX(1.5px);
+  }
+  100% {
+    transform: translateX(-1.5px);
+  }
+}
+
 .button {
   border: 1px solid #fff;
   cursor: pointer;
@@ -112,6 +124,8 @@
 
 .button_delete:hover {
   opacity: 0.8;
+  animation: rotateLeftToRight 2s;
+  animation: shake 0.3s;
 }
 
 @media screen and (min-width: 878px) {
