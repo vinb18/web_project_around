@@ -32,4 +32,4 @@ Este es un proyecto responsivo y adaptativo que utiliza HTML, CSS y JavaScript
 - Itzel Netba
 - [Github Vinb18](https://github.com/vinb18/web_project_around.git)
 - veronica.netba@gmail.com
-- [Liga de Proyecto] (https://vinb18.github.io/web_project_around/)
+- [Liga de Proyecto](https://vinb18.github.io/web_project_around/)
