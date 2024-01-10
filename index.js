@@ -151,17 +151,6 @@ overlays.forEach((overlay) => {
   });
 });
 
-/* document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    const popups = document.querySelectorAll(".popup");
-    popups.forEach((popup) => {
-      if (popup.classList.contains("popup__opened")) {
-        togglePopup(popup);
-      }
-    });
-  }
-}); */
-
 function keyHandler(event) {
   if (event.key === "Escape") {
     const popups = document.querySelectorAll(".popup");
