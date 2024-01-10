@@ -22,6 +22,11 @@ const buttonCloseImage = popupImage.querySelector(".button_close");
 const buttonSave = document.querySelector(".button_save");
 
 function togglePopup(popup) {
+  if (popup.classList.contains("popup__opened")) {
+    document.removeEventListener("keydown", keyHandler);
+  } else {
+    document.addEventListener("keydown", keyHandler);
+  }
   popup.classList.toggle("popup__opened");
 }
 
@@ -41,17 +46,14 @@ buttonAdd.addEventListener("click", function () {
 
 buttonCloseAdd.addEventListener("click", function () {
   togglePopup(popupAdd);
-  document.removeEventListener("keydown", keyHandler);
 });
 
 buttonClose.addEventListener("click", function () {
   togglePopup(popupProfile);
-  document.removeEventListener("keydown", keyHandler);
 });
 
 buttonCloseImage.addEventListener("click", function () {
   togglePopup(popupImage);
-  document.removeEventListener("keydown", keyHandler);
 });
 
 profileForm.addEventListener("submit", function (event) {
@@ -161,5 +163,3 @@ function keyHandler(event) {
     });
   }
 }
-
-document.addEventListener("keydown", keyHandler);
