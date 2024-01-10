@@ -123,7 +123,6 @@ function createCard(placeName, link) {
 
   clickImage.addEventListener("click", function () {
     showPopup(popupImage, link, placeName);
-    popupImage.setAttribute("alt", placeName);
   });
 
   likeButton.addEventListener("click", function () {
@@ -136,6 +135,7 @@ function showPopup(popupImageElement, linkUrl, placeName) {
   popupImageElement.classList.toggle("popup__opened");
   popupImageElement.querySelector("img").src = linkUrl;
   popupImageElement.querySelector(".popup__title").textContent = placeName;
+  popupImageElement.querySelector("img").setAttribute("alt", placeName);
 }
 
 function removeCard(cardElement) {
