@@ -113,7 +113,6 @@ function createCard(placeName, link) {
   cardElement.querySelector(".element__title").textContent = placeName;
   const cardImage = cardElement.querySelector(".element__image");
   cardImage.src = link;
-  cardImage.setAttribute("alt", placeName);
   const deleteButton = cardElement.querySelector(".button_delete");
   const clickImage = cardElement.querySelector(".element__image");
   const likeButton = cardElement.querySelector(".button_like");
@@ -124,6 +123,7 @@ function createCard(placeName, link) {
 
   clickImage.addEventListener("click", function () {
     showPopup(popupImage, link, placeName);
+    popupImage.setAttribute("alt", placeName);
   });
 
   likeButton.addEventListener("click", function () {
@@ -136,7 +136,6 @@ function showPopup(popupImageElement, linkUrl, placeName) {
   popupImageElement.classList.toggle("popup__opened");
   popupImageElement.querySelector("img").src = linkUrl;
   popupImageElement.querySelector(".popup__title").textContent = placeName;
-  popupImageElement.setAttribute("alt", placeName);
 }
 
 function removeCard(cardElement) {
