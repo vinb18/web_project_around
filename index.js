@@ -1,3 +1,7 @@
+import Card from "./Card.js";
+import FormValidator from "./FormValidator.js";
+import { selectorsConfig, popupImage } from "./utils.js";
+
 const buttonEdit = document.querySelector(".button_edit");
 const popupProfile = document.querySelector(".popup");
 const buttonClose = document.querySelector(".button_close");
@@ -17,7 +21,7 @@ const buttonSaveAdd = popupAdd.querySelector(".button_save");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
-const popupImage = document.querySelector(".popup_image");
+
 const buttonCloseImage = popupImage.querySelector(".button_close");
 const buttonSave = document.querySelector(".button_save");
 
@@ -30,9 +34,9 @@ function togglePopup(popup) {
   popup.classList.toggle("popup__opened");
 }
 
-function toggleLike(button_like) {
+/* function toggleLike(button_like) {
   button_like.classList.toggle("button_like-black");
-}
+} */
 
 buttonEdit.addEventListener("click", function () {
   inputName.value = profileName.textContent;
@@ -104,11 +108,16 @@ const elementsSection = document.querySelector(".elements");
 
 //Iterar sobre las tarjetas
 initialCards.forEach((item) => {
-  const newCard = createCard(item.name, item.link);
-  elementsSection.append(newCard);
+  //const newCard = createCard(item.name, item.link);
+  const newCard = new Card(item.name, item.link, "#card-template");
+
+  elementsSection.append(newCard.generateCard());
 });
 
+// card = new Card(name, link, selector);
+//carsArea.append(card.render())
 //Configurar valores de la tarjeta
+/*
 function createCard(placeName, link) {
   const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
@@ -131,17 +140,13 @@ function createCard(placeName, link) {
     toggleLike(likeButton);
   });
   return cardElement;
-}
+}*/
 
 function showPopup(popupImageElement, linkUrl, placeName) {
   popupImageElement.classList.toggle("popup__opened");
   popupImageElement.querySelector("img").src = linkUrl;
   popupImageElement.querySelector(".popup__title").textContent = placeName;
   popupImageElement.querySelector("img").setAttribute("alt", placeName);
-}
-
-function removeCard(cardElement) {
-  cardElement.remove();
 }
 
 const overlays = document.querySelectorAll(".popup__overlay");
@@ -163,3 +168,10 @@ function keyHandler(event) {
     });
   }
 }
+
+Array.from(document.querySelectorAll(selectorsConfig.formSelector)).forEach(
+  (formElement) => {
+    const formValidator = new FormValidator(selectorsConfig, formElement);
+    formValidator.enableValidation();
+  }
+);
