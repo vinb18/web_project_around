@@ -1,18 +1,18 @@
 import { removeCard, popupImage, showPopup, toggleLike } from "./utils.js";
 
 export default class Card {
-  constructor(name, src, templateSelector) {
-    this.name = name;
-    this.src = src;
+  constructor(placeName, linkUrl, templateSelector) {
+    this.placeName = placeName;
+    this.linkUrl = linkUrl;
     this.templateSelector = templateSelector;
   }
 
   _getTemplate() {
     const cardTemplate = document.querySelector(this.templateSelector).content;
     const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
-    cardElement.querySelector(".element__title").textContent = this.name;
+    cardElement.querySelector(".element__title").textContent = this.placeName;
     const cardImage = cardElement.querySelector(".element__image");
-    cardImage.src = this.src;
+    cardImage.src = this.linkUrl;
 
     return cardElement;
   }
@@ -27,7 +27,7 @@ export default class Card {
     });
 
     clickImage.addEventListener("click", () => {
-      showPopup(this._popupImage, this._src, this._name);
+      showPopup(popupImage, this.linkUrl, this.placeName);
     });
 
     likeButton.addEventListener("click", () => {

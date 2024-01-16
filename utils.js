@@ -1,12 +1,14 @@
+export const popupImage = document.querySelector(".popup_image");
+
 export function removeCard(cardElement) {
   cardElement.remove();
 }
 
-export function showPopup(popupImage, src, name) {
+export function showPopup(popupImage, linkUrl, placeName) {
   popupImage.classList.toggle("popup__opened");
-  popupImage.querySelector("img").src = src;
-  popupImage.querySelector(".popup__title").textContent = name;
-  popupImage.querySelector("img").setAttribute("alt", name);
+  popupImage.querySelector("img").src = linkUrl;
+  popupImage.querySelector(".popup__title").textContent = placeName;
+  popupImage.querySelector("img").setAttribute("alt", placeName);
 }
 
 export function toggleLike(button_like) {
@@ -21,5 +23,3 @@ export const selectorsConfig = {
   inputErrorClass: "popup__item-invalid",
   errorClass: "popup__item-error_active",
 };
-
-export const popupImage = document.querySelector(".popup_image");

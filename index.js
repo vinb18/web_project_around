@@ -142,12 +142,12 @@ function createCard(placeName, link) {
   return cardElement;
 }*/
 
-function showPopup(popupImageElement, linkUrl, placeName) {
+/* function showPopup(popupImageElement, linkUrl, placeName) {
   popupImageElement.classList.toggle("popup__opened");
   popupImageElement.querySelector("img").src = linkUrl;
   popupImageElement.querySelector(".popup__title").textContent = placeName;
   popupImageElement.querySelector("img").setAttribute("alt", placeName);
-}
+} */
 
 const overlays = document.querySelectorAll(".popup__overlay");
 
