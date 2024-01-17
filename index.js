@@ -64,7 +64,6 @@ cardForm.addEventListener("submit", function (event) {
   togglePopup(popupAdd);
 });
 
-//Array
 const initialCards = [
   {
     name: "Arizona",
