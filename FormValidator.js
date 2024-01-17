@@ -4,8 +4,6 @@ export default class FormValidator {
     this.formElement = formElement;
   }
 
-  _setEventListeners() {}
-
   _checkInputValidity = (
     formElement,
     inputElement,
