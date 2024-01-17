@@ -1,3 +1,5 @@
+import { selectorsConfig } from "./utils.js";
+
 export default class FormValidator {
   constructor(selectorsConfig, formElement) {
     this.selectorsConfig = selectorsConfig;
@@ -13,7 +15,7 @@ export default class FormValidator {
     errorClass
   ) => {
     if (!inputElement.validity.valid) {
-      showInputError(
+      this._showInputError(
         formElement,
         inputElement,
         inputElement.validationMessage,
@@ -21,7 +23,12 @@ export default class FormValidator {
         errorClass
       );
     } else {
-      hideInputError(formElement, inputElement, inputErrorClass, errorClass);
+      this._hideInputError(
+        formElement,
+        inputElement,
+        inputErrorClass,
+        errorClass
+      );
     }
   };
 
@@ -88,12 +95,12 @@ export default class FormValidator {
     );
 
     inputList.forEach((inputElement) => {
-      inputElement.addEventListener("input", function () {
+      inputElement.addEventListener("input", () => {
         this._checkInputValidity(
-          formElement,
+          this.formElement,
           inputElement,
-          inputErrorClass,
-          errorClass
+          this.selectorsConfig.inputErrorClass,
+          this.selectorsConfig.errorClass
         );
         this._toggleButtonState(
           inputList,

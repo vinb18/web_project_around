@@ -69,8 +69,8 @@ profileForm.addEventListener("submit", function (event) {
 
 cardForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const newCard = createCard(inputTitle.value, inputUrl.value);
-  elementsSection.prepend(newCard);
+  const newCard = new Card(inputTitle.value, inputUrl.value, "#card-template");
+  elementsSection.prepend(newCard.generateCard());
   cardForm.reset();
   togglePopup(popupAdd);
 });
