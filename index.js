@@ -5,25 +5,18 @@ import { selectorsConfig, popupImage } from "./utils.js";
 const buttonEdit = document.querySelector(".button_edit");
 const popupProfile = document.querySelector(".popup");
 const buttonClose = document.querySelector(".button_close");
-const buttonLike = document.querySelector("button_like");
-
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 const profileForm = document.forms.edit;
 const inputName = profileForm.elements.name;
 const job = profileForm.elements.job;
-const elements = document.querySelector(".elements");
-
 const buttonAdd = document.querySelector(".button_add");
 const popupAdd = document.querySelector(".popup_add");
 const buttonCloseAdd = popupAdd.querySelector(".button_close");
-const buttonSaveAdd = popupAdd.querySelector(".button_save");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
-
 const buttonCloseImage = popupImage.querySelector(".button_close");
-const buttonSave = document.querySelector(".button_save");
 
 function togglePopup(popup) {
   if (popup.classList.contains("popup__opened")) {
