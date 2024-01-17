@@ -1,5 +1,3 @@
-import { selectorsConfig } from "./utils.js";
-
 export default class FormValidator {
   constructor(selectorsConfig, formElement) {
     this.selectorsConfig = selectorsConfig;
