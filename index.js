@@ -1,6 +1,11 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
-import { selectorsConfig, popupImage } from "./utils.js";
+import {
+  selectorsConfig,
+  popupImage,
+  keyHandler,
+  togglePopup,
+} from "./utils.js";
 
 const buttonEdit = document.querySelector(".button_edit");
 const popupProfile = document.querySelector(".popup");
@@ -17,15 +22,6 @@ const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
 const buttonCloseImage = popupImage.querySelector(".button_close");
-
-function togglePopup(popup) {
-  if (popup.classList.contains("popup__opened")) {
-    document.removeEventListener("keydown", keyHandler);
-  } else {
-    document.addEventListener("keydown", keyHandler);
-  }
-  popup.classList.toggle("popup__opened");
-}
 
 buttonEdit.addEventListener("click", function () {
   inputName.value = profileName.textContent;
@@ -108,17 +104,6 @@ overlays.forEach((overlay) => {
     togglePopup(popup);
   });
 });
-
-function keyHandler(event) {
-  if (event.key === "Escape") {
-    const popups = document.querySelectorAll(".popup");
-    popups.forEach((popup) => {
-      if (popup.classList.contains("popup__opened")) {
-        togglePopup(popup);
-      }
-    });
-  }
-}
 
 Array.from(document.querySelectorAll(selectorsConfig.formSelector)).forEach(
   (formElement) => {

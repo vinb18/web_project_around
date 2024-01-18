@@ -1,4 +1,10 @@
-import { removeCard, popupImage, showPopup, toggleLike } from "./utils.js";
+import {
+  removeCard,
+  popupImage,
+  showPopup,
+  toggleLike,
+  togglePopup,
+} from "./utils.js";
 
 export default class Card {
   constructor(placeName, linkUrl, templateSelector) {
@@ -28,6 +34,7 @@ export default class Card {
 
     clickImage.addEventListener("click", () => {
       showPopup(popupImage, this.linkUrl, this.placeName);
+      togglePopup(popupImage);
     });
 
     likeButton.addEventListener("click", () => {

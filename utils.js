@@ -5,7 +5,6 @@ export function removeCard(cardElement) {
 }
 
 export function showPopup(popupImage, linkUrl, placeName) {
-  popupImage.classList.toggle("popup__opened");
   popupImage.querySelector("img").src = linkUrl;
   popupImage.querySelector(".popup__title").textContent = placeName;
   popupImage.querySelector("img").setAttribute("alt", placeName);
@@ -23,3 +22,24 @@ export const selectorsConfig = {
   inputErrorClass: "popup__item-invalid",
   errorClass: "popup__item-error_active",
 };
+
+export function togglePopup(popup) {
+  if (popup.classList.contains("popup__opened")) {
+    document.removeEventListener("keydown", keyHandler);
+  } else {
+    document.addEventListener("keydown", keyHandler);
+  }
+  popup.classList.toggle("popup__opened");
+}
+
+export function keyHandler(event) {
+  if (event.key === "Escape") {
+    const popups = document.querySelectorAll(".popup");
+    console.log(popups);
+    popups.forEach((popup) => {
+      if (popup.classList.contains("popup__opened")) {
+        togglePopup(popup);
+      }
+    });
+  }
+}
