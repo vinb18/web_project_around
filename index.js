@@ -1,11 +1,11 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
+import Card from "./scripts/Card.js";
+import FormValidator from "./scripts/FormValidator.js";
 import {
   selectorsConfig,
   popupImage,
   keyHandler,
   togglePopup,
-} from "./utils.js";
+} from "./scripts/utils.js";
 
 const buttonEdit = document.querySelector(".button_edit");
 const popupProfile = document.querySelector(".popup");
