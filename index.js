@@ -22,6 +22,7 @@ const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
 const buttonCloseImage = popupImage.querySelector(".button_close");
+/* const defaultCard = new Section({ data: items }, containerSelector); */
 
 buttonEdit.addEventListener("click", function () {
   inputName.value = profileName.textContent;
