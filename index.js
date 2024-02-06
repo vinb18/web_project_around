@@ -7,22 +7,27 @@ import {
   togglePopup,
 } from "./scripts/utils.js";
 
+const popupProfile = new PopupWithForm(popupSelector);
+const popupAdd = new PopupWithForm(popupSelector);
 const buttonEdit = document.querySelector(".button_edit");
-const popupProfile = document.querySelector(".popup");
-const buttonClose = document.querySelector(".button_close");
+/* const popupProfile = document.querySelector(".popup"); */
+//const buttonClose = document.querySelector(".button_close");
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 const profileForm = document.forms.edit;
 const inputName = profileForm.elements.name;
 const job = profileForm.elements.job;
 const buttonAdd = document.querySelector(".button_add");
-const popupAdd = document.querySelector(".popup_add");
+/* const popupAdd = document.querySelector(".popup_add"); */
 const buttonCloseAdd = popupAdd.querySelector(".button_close");
 const inputTitle = document.querySelector(".popup__item_title");
 const inputUrl = document.querySelector(".popup__item_url");
 const cardForm = document.forms.add;
 const buttonCloseImage = popupImage.querySelector(".button_close");
 /* const defaultCard = new Section({ data: items }, containerSelector); */
+const popupProfileSelector = ".popup_profile";
+const popupAddSelector = ".popup_add";
+const popupImageSelector = ".popup_image";
 
 buttonEdit.addEventListener("click", function () {
   inputName.value = profileName.textContent;
@@ -34,7 +39,7 @@ buttonAdd.addEventListener("click", function () {
   togglePopup(popupAdd);
 });
 
-buttonCloseAdd.addEventListener("click", function () {
+/* buttonCloseAdd.addEventListener("click", function () {
   togglePopup(popupAdd);
 });
 
@@ -44,7 +49,7 @@ buttonClose.addEventListener("click", function () {
 
 buttonCloseImage.addEventListener("click", function () {
   togglePopup(popupImage);
-});
+}); */
 
 profileForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -97,14 +102,14 @@ initialCards.forEach((item) => {
   elementsSection.append(newCard.generateCard());
 });
 
-const overlays = document.querySelectorAll(".popup__overlay");
+/* const overlays = document.querySelectorAll(".popup__overlay"); */
 
-overlays.forEach((overlay) => {
+/* overlays.forEach((overlay) => {
   overlay.addEventListener("click", function (event) {
     const popup = overlay.closest(".popup");
     togglePopup(popup);
   });
-});
+}); */
 
 Array.from(document.querySelectorAll(selectorsConfig.formSelector)).forEach(
   (formElement) => {
