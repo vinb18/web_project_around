@@ -54,8 +54,9 @@ const buttonAdd = document.querySelector(".button_add");
 //const defaultCard = new Section({ data: items }, containerSelector);
 
 buttonEdit.addEventListener("click", function () {
-  /* inputName.value = profileName.textContent;
-  job.value = profileJob.textContent; */
+  const userData = userInfo.getUserInfo();
+  inputName.value = userData.username;
+  job.value = userData.job;
   popupProfile.open();
 });
 
