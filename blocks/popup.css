@@ -75,7 +75,7 @@
   display: block;
 }
 
-.popup__opened {
+.popup_opened {
   display: flex;
   opacity: 1;
   transform: translateY(0);

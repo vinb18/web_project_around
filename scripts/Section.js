@@ -8,4 +8,16 @@ export default class Section {
   addItem(cardElement) {
     this._container.appendChild(cardElement);
   }
+
+  clear() {
+    this._container.innerHTML = "";
+  }
+
+  renderItems() {
+    this.clear();
+
+    this._items.forEach((item) => {
+      this._renderer(item);
+    });
+  }
 }

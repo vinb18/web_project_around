@@ -4,11 +4,11 @@ export function removeCard(cardElement) {
   cardElement.remove();
 }
 
-export function showPopup(popupImage, linkUrl, placeName) {
+/* export function showPopup(popupImage, linkUrl, placeName) {
   popupImage.querySelector("img").src = linkUrl;
   popupImage.querySelector(".popup__title").textContent = placeName;
   popupImage.querySelector("img").setAttribute("alt", placeName);
-}
+} */
 
 export function toggleLike(button_like) {
   button_like.classList.toggle("button_like-black");

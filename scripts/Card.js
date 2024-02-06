@@ -1,16 +1,11 @@
-import {
-  removeCard,
-  popupImage,
-  showPopup,
-  toggleLike,
-  togglePopup,
-} from "./utils.js";
+import { removeCard, toggleLike } from "./utils.js";
 
 export default class Card {
-  constructor(placeName, linkUrl, templateSelector) {
+  constructor(placeName, linkUrl, templateSelector, { handleClickImage }) {
     this.placeName = placeName;
     this.linkUrl = linkUrl;
     this.templateSelector = templateSelector;
+    this._handleClickImage = handleClickImage;
   }
 
   _getTemplate() {
@@ -32,10 +27,7 @@ export default class Card {
       removeCard(this._cardElement);
     });
 
-    clickImage.addEventListener("click", () => {
-      showPopup(popupImage, this.linkUrl, this.placeName);
-      togglePopup(popupImage);
-    });
+    clickImage.addEventListener("click", this._handleClickImage);
 
     likeButton.addEventListener("click", () => {
       toggleLike(likeButton);
