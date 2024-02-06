@@ -16,7 +16,7 @@ const popupProfile = new PopupWithForm(popupProfileSelector, (inputValues) => {
   popupProfile.close();
 });
 
-const popupAddCard = new PopupWithForm(popupAddSelector, (inputValues) => {
+const popupAddButton = new PopupWithForm(popupAddSelector, (inputValues) => {
   const newCard = new Card(
     inputValues.title,
     inputValues.link,
