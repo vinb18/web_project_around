@@ -8,8 +8,8 @@ export default class PopupWithForm extends Popup {
 
   close() {
     const form = this._popupElement.querySelector("form");
-    form.reset();
     super.close();
+    form.reset();
   }
 
   _getInputValues() {
@@ -22,10 +22,10 @@ export default class PopupWithForm extends Popup {
   }
 
   setEventListeners() {
-    //submit y click
     super.setEventListeners();
     const form = this._popupElement.querySelector("form");
     form.addEventListener("submit", (event) => {
+      event.preventDefault();
       this._submitCallback(this._getInputValues());
       this.close();
     });

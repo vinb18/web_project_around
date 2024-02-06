@@ -4,6 +4,7 @@ import { selectorsConfig } from "./scripts/utils.js";
 import PopupWithImage from "./scripts/PopupWithImage.js";
 import PopupWithForm from "./scripts/PopupWithForm.js";
 import Section from "./scripts/section.js";
+import UserInfo from "./scripts/UserInfo.js";
 
 const popupProfileSelector = ".popup_profile";
 const popupAddSelector = ".popup_add";
@@ -30,10 +31,10 @@ const popupAddButton = new PopupWithForm(popupAddSelector, (inputValues) => {
   elementsSection.prepend(newCard.generateCard());
 });
 
-/*
-const popupProfile = new PopupWithForm(popupSelector);
-const popupAdd = new PopupWithForm(popupSelector);
-*/
+const userInfo = new UserInfo({
+  usernameSelector: ".profile__name",
+  jobSelector: ".profile__job",
+});
 
 const buttonEdit = document.querySelector(".button_edit");
 /* const popupProfile = document.querySelector(".popup"); */
@@ -46,15 +47,15 @@ const job = profileForm.elements.job;
 const buttonAdd = document.querySelector(".button_add");
 /* const popupAdd = document.querySelector(".popup_add"); */
 //const buttonCloseAdd = popupAdd.querySelector(".button_close");
-const inputTitle = document.querySelector(".popup__item_title");
-const inputUrl = document.querySelector(".popup__item_url");
-const cardForm = document.forms.add;
+//const inputTitle = document.querySelector(".popup__item_title");
+//const inputUrl = document.querySelector(".popup__item_url");
+//const cardForm = document.forms.add;
 // const buttonCloseImage = popupImage.querySelector(".button_close");
 //const defaultCard = new Section({ data: items }, containerSelector);
 
 buttonEdit.addEventListener("click", function () {
-  inputName.value = profileName.textContent;
-  job.value = profileJob.textContent;
+  /* inputName.value = profileName.textContent;
+  job.value = profileJob.textContent; */
   popupProfile.open();
 });
 
