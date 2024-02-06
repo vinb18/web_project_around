@@ -19,7 +19,7 @@ const popupProfile = new PopupWithForm(popupProfileSelector, (inputValues) => {
 const popupAddButton = new PopupWithForm(popupAddSelector, (inputValues) => {
   const newCard = new Card(
     inputValues.title,
-    inputValues.link,
+    inputValues.url,
     "#card-template",
     {
       handleClickImage: () => {
