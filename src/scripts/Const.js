@@ -10,29 +10,36 @@ export const popupProfileSelector = ".popup_profile";
 export const popupAddSelector = ".popup_add";
 export const popupImageSelector = ".popup_image";
 
+import Arizona from "../images/Arizona.jpg";
+import Gatlinburg from "../images/Gatlinburg.jpg";
+import Oregon from "../images/Oregon.jpg";
+import Washington from "../images/Washington.jpg";
+import Yellowstone from "../images/Yellowstone.jpg";
+import Zion from "../images/Zion.jpg";
+
 export const initialCards = [
   {
     name: "Arizona",
-    link: "./images/Arizona.jpg",
+    link: Arizona,
   },
   {
     name: "Gatlinburg",
-    link: "./images/Gatlinburg.jpg",
+    link: Gatlinburg,
   },
   {
     name: "Oregon",
-    link: "./images/Oregon.jpg",
+    link: Oregon,
   },
   {
     name: "Washington",
-    link: "./images/Washington.jpg",
+    link: Washington,
   },
   {
     name: "Yellowstone",
-    link: "./images/Yellowstone.jpg",
+    link: Yellowstone,
   },
   {
     name: "Parque Nacional Zion",
-    link: "./images/Zion.jpg",
+    link: Zion,
   },
 ];
