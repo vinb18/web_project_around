@@ -86,9 +86,12 @@ class Api {
       method: "DELETE",
     }).then((response) => response.json());
   }
-
-  /* export const api = new Api(
-  "url: https://around.nomoreparties.co/v1/web_es_11",
-  "token: 3211f2ac-735f-43eb-baad-2fad40c3f616"
-); */
 }
+
+const api = new Api({
+  baseUrl: "https://around.nomoreparties.co/v1/web_es_11",
+  headers: {
+    authorization: "3211f2ac-735f-43eb-baad-2fad40c3f616",
+    "Content-Type": "application/json",
+  },
+});
