@@ -19,7 +19,7 @@ class Api {
     }).then((response) => response.json());
   }
 
-  getCards() {
+  getInitialCards() {
     return fetch(this._url + "/cards", {
       headers: {
         authorization: this._token,
