@@ -1,11 +1,19 @@
 import { removeCard, toggleLike } from "./utils.js";
 
 export default class Card {
-  constructor(placeName, linkUrl, templateSelector, { handleClickImage }) {
+  constructor(
+    placeName,
+    linkUrl,
+    templateSelector,
+    { handleClickImage, handleLike, handleRemoveLike, handleDeleteCard }
+  ) {
     this.placeName = placeName;
     this.linkUrl = linkUrl;
     this.templateSelector = templateSelector;
     this._handleClickImage = handleClickImage;
+    this._handleLike = handleLike;
+    this._handleRemoveLike = handleRemoveLike;
+    this._handleDeleteCard = handleDeleteCard;
   }
 
   _getTemplate() {
