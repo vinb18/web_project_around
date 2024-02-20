@@ -9,6 +9,11 @@ export default class Section {
     this._container.appendChild(cardElement);
   }
 
+  setItems(items) {
+    this.clear();
+    this._items = items;
+  }
+
   clear() {
     this._container.innerHTML = "";
   }

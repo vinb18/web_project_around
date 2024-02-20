@@ -19,6 +19,7 @@ import {
   popupImageSelector,
   initialCards,
 } from "./scripts/Const.js";
+import { api } from "./utils/Api.js";
 
 const popupImage = new PopupWithImage(popupImageSelector);
 const popupProfile = new PopupWithForm(popupProfileSelector, (inputValues) => {
@@ -28,6 +29,7 @@ const popupProfile = new PopupWithForm(popupProfileSelector, (inputValues) => {
 });
 
 const popupAddButton = new PopupWithForm(popupAddSelector, (inputValues) => {
+  api.addCard(inputValues.url, inputValues.title).then((card) => {});
   const newCard = new Card(
     inputValues.title,
     inputValues.url,
@@ -71,8 +73,10 @@ const sectionCards = new Section(
   },
   ".elements"
 );
-
-sectionCards.renderItems();
+api.getCards().then((elements) => {
+  sectionCards.setItems(elements);
+  sectionCards.renderItems();
+});
 
 Array.from(document.querySelectorAll(selectorsConfig.formSelector)).forEach(
   (formElement) => {

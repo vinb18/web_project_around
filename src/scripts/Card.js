@@ -5,7 +5,13 @@ export default class Card {
     placeName,
     linkUrl,
     templateSelector,
-    { handleClickImage, handleLike, handleRemoveLike, handleDeleteCard }
+    {
+      handleClickImage,
+      handleLike,
+      handleRemoveLike,
+      handleDeleteCard,
+      inputValues,
+    }
   ) {
     this.placeName = placeName;
     this.linkUrl = linkUrl;
