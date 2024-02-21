@@ -19,7 +19,7 @@ import {
   popupImageSelector,
   initialCards,
 } from "./scripts/Const.js";
-import { api } from "./utils/Api.js";
+/* import { api } from "./utils/Api.js"; */
 
 const popupImage = new PopupWithImage(popupImageSelector);
 const popupProfile = new PopupWithForm(popupProfileSelector, (inputValues) => {
@@ -73,10 +73,16 @@ const sectionCards = new Section(
   },
   ".elements"
 );
-api.getCards().then((elements) => {
-  sectionCards.setItems(elements);
-  sectionCards.renderItems();
-});
+
+sectionCards.renderItems();
+/* api
+  .getCards()
+  .then((elements) => {
+    sectionCards.setItems(elements);
+  })
+  .finally(() => {
+    sectionCards.renderItems();
+  }); */
 
 Array.from(document.querySelectorAll(selectorsConfig.formSelector)).forEach(
   (formElement) => {
